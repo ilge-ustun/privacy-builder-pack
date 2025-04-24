@@ -46,6 +46,37 @@ Government suppression of journalists who uphold integrity creates a disincentiv
 
 ---
 
+## Tools
+
+A curated collection of tools and resources.
+
+→ [pwned?](https://haveibeenpwned.com) → [Data Leaks](https://monitor.mozilla.org/breaches) → [Browser Privacy](https://privacytests.org/)
+
+Categories:
+* [Integrated Development Environments (IDE)](#integrated-development-environments-ide)
+* [Cryptography Libraries](#cryptography-libraries)
+
+### Integrated Development Environments (IDE)
+
+Development libraries and frameworks.
+
+| Name | Description |
+| --- | --- |
+| TODO name | TODO description |
+
+### Cryptography Libraries
+
+Privacy-preserving development libraries and frameworks.
+
+| Name | Description |
+| --- | --- |
+| [Awesome ZKP](/) | Awesome things related to learning ZKP |
+| [LibStark](/) | A library for ZK scalable transparent argument of knowledge |
+| [EthSnarks](/) | A toolkit for developing ETH compatible SC with ZKP |
+
+
+---
+
 ## Tips & Tricks
 
 Explore what seasoned hackers suggest to help you to build real impact instead of dead code.
