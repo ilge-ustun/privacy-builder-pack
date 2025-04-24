@@ -5,8 +5,9 @@
 !!TODO Short description
 
 ## Authors
-* Jensei ([@_jensei](https://x.com/jensei_))
-* Mykola Siusko ([@nicksvyaznoy](https://x.com/nicksvyaznoy))
+* **Jensei** ([@_jensei](https://x.com/jensei_)) - main concept, design
+* **Mykola Siusko** ([@nicksvyaznoy](https://x.com/nicksvyaznoy)) - Pagency framework, mentoring
+* **Tree** ([@tree.fail](https://bsky.app/profile/tree.fail)) - technical support
 
 
 ## Table of Content
