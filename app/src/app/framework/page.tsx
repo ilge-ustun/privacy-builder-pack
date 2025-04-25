@@ -2,6 +2,7 @@
 import Image from "next/image"
 import PagencyFrameworkForm from "@/components/PagencyFrameworkForm"
 import { useSearchParams } from "next/navigation"
+import PagencyFrameworkSummary from "@/components/PagencyFrameworkSummary"
 
 export default function Framework() {
   const searchParams = useSearchParams()
@@ -17,7 +18,7 @@ export default function Framework() {
         <div>
           A structured approach to building privacy-enhancing applications that make a real impact.
         </div>
-        <PagencyFrameworkForm itemId={itemId} />
+        {itemId === 0 ? <PagencyFrameworkSummary /> : <PagencyFrameworkForm itemId={itemId} />}
       </div>
     </main>
   )

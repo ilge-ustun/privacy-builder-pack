@@ -1,7 +1,8 @@
 import { FrameworkItem } from "@/types/framework"
 import frameworkItems from "@/data/pagencyFramework.json"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { saveFormData, getFormData } from "@/utils/indexedDB"
 
 interface Props {
   itemId: number
@@ -12,15 +13,36 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
   const item = (frameworkItems as FrameworkItem[]).find((item) => item.id === String(itemId))
   const [formData, setFormData] = useState<Record<string, string>>({})
 
+  useEffect(() => {
+    const loadSavedData = async () => {
+      try {
+        const savedData = await getFormData(itemId)
+        if (savedData) {
+          setFormData(savedData)
+        } else {
+          setFormData({})
+        }
+      } catch (error) {
+        console.error("Error loading saved data:", error)
+      }
+    }
+    loadSavedData()
+  }, [itemId])
+
   if (!item) return null
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log("Form data:", formData)
-    if (itemId === frameworkItems.length) {
-      router.push(`/framework?item=summary`)
-    } else {
-      router.push(`/framework?item=${itemId + 1}`)
+    try {
+      await saveFormData(itemId, formData)
+      console.log("Form data saved:", formData)
+      if (itemId === frameworkItems.length) {
+        router.push(`/framework?item=0`)
+      } else {
+        router.push(`/framework?item=${itemId + 1}`)
+      }
+    } catch (error) {
+      console.error("Error saving form data:", error)
     }
   }
 
