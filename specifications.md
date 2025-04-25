@@ -1,14 +1,14 @@
 -----------
 
-Status: open
+Status: assigned
 
 Date: 24/04/2025
 
-Date completed by Dev: [date]
+Date completed by Dev: [TBE]
 
-Dev assigned to: [user]
+Dev assigned to: [@ilge-ustun]
 
-Estimated time to complete (hours): [number]
+Estimated time to complete (hours): [TBD]
 
 -----------
 
@@ -44,17 +44,22 @@ Figma (design): https://www.figma.com/design/1bHbpOjINJBxXbHJqdOb62/Untitled?nod
 
 Milestone 1
 
-- Objective:
-- Date of completion: [date]
+- Objective: Adapt the Figma design into responsive, clean front-end code. Build static pages and clickable flow without backend form logic yet. (Focus: UI/UX, design fidelity, frontend structure.)
+- Date of completion: [TBD]
 
 
 Milestone 2
 
-- Objective:
-- Date of completion: [date]
+- Objective: Create a functional MVP that includes dynamic form logic, input validation, and basic user flow. Deploy first version to staging environment (Vercel test URL).
+- Date of completion: [TBD]
 
 
 Milestone 3
 
-- Objective:
-- Date of completion: [date]
+- Objective: Address team feedback, improve code quality, add detailed comments, and ensure the app is production-ready. Prepare for final deployment to pbp.web3privacy.info.
+- Date of completion: [TBD]
+
+# Final Output
+
+- Fully working, well-commented code in /privacy-builder-pack repository.
+- Live website deployed through Web3Privacy’s Vercel account (pbp.web3privacy.info).
