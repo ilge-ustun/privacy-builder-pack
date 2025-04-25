@@ -57,7 +57,7 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 p-0 text-white z-50">
+    <nav className="absolute top-0 left-0 right-0 p-0 text-white z-50">
       <div className="p-4 relative z-100 flex md:space-x-5 items-center justify-between md:justify-center max-w-7xl mx-auto">
         <Link
           href="/"
@@ -69,7 +69,7 @@ export default function Navbar() {
           <div className="w-5 h-5 relative flex-shrink-0">
             <Image src="/navbar/privacy.svg" alt="Privacy Builder Pack" fill />
           </div>
-          <span className="text-white">Privacy Builder Packkkkk</span>
+          <span className="text-white">Privacy Builder Pack</span>
         </Link>
         <button
           className="md:hidden p-2 opacity-70 hover:opacity-100"
