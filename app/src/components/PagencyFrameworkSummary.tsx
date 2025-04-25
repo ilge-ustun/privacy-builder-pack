@@ -28,31 +28,36 @@ export default function PagencyFrameworkSummary() {
         Download summary
       </button>
 
-      {allData.map(({ itemId, data }) => {
-        const item = (frameworkItems as FrameworkItem[]).find((item) => item.id === String(itemId))
-        if (!item) return null
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 p-6 mx-auto">
+        {allData.map(({ itemId, data }) => {
+          const item = (frameworkItems as FrameworkItem[]).find(
+            (item) => item.id === String(itemId),
+          )
+          if (!item) return null
 
-        return (
-          <div key={itemId} className="border border-white/50 rounded-md p-5">
-            <h3 className="text-xl font-bold text-green mb-4">
-              {item.id}. {item.title}
-            </h3>
-            <h4 className="text-white text-sm mb-2">{item.description}</h4>
-            {item.sections.map((section, sIndex) => (
-              <div key={sIndex} className="mb-4">
-                {section.questions.map((question, qIndex) => (
-                  <div key={qIndex} className="mb-4">
-                    <p className="text-green text-sm mb-1">{question}</p>
-                    <p className="text-white ">
-                      {data[`${section.title}-${qIndex}`] || "No answer provided"}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        )
-      })}
+          return (
+            <div
+              key={itemId}
+              className="mb-4 break-inside-avoid border border-white/50 rounded-md p-5 bg-black/10 transition-transform hover:scale-[1.02] duration-300"
+            >
+              <h3 className="text-xl font-bold text-green mb-4">
+                {item.id}. {item.title}
+              </h3>
+              <h4 className="text-white text-sm mb-2">{item.description}</h4>
+              {item.sections.map((section, sIndex) => (
+                <div key={sIndex} className="mb-4">
+                  {section.questions.map((question, qIndex) => (
+                    <div key={qIndex} className="mb-4">
+                      <p className="text-green text-sm mb-1">{question}</p>
+                      <p className="text-white">{data[`${section.title}-${qIndex}`] || "..."}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

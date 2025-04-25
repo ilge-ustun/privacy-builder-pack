@@ -35,7 +35,6 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
     e.preventDefault()
     try {
       await saveFormData(itemId, formData)
-      console.log("Form data saved:", formData)
       if (itemId === frameworkItems.length) {
         router.push(`/framework?item=0`)
       } else {
@@ -46,9 +45,18 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
     }
   }
 
-  const handlePrevious = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handlePrevious = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    router.push(`/framework?item=${itemId - 1}`)
+    try {
+      await saveFormData(itemId, formData)
+      if (itemId === 1) {
+        return
+      } else {
+        router.push(`/framework?item=${itemId - 1}`)
+      }
+    } catch (error) {
+      console.error("Error saving form data:", error)
+    }
   }
 
   const handleTextAreaChange = (name: string, value: string) => {
