@@ -30,6 +30,7 @@ Figma (design): https://www.figma.com/design/1bHbpOjINJBxXbHJqdOb62/Untitled?nod
 - The project requires skills in creating dynamic forms that take inputs and produce a unique output for each user submissions
 - The project requires some amount of adanced filtering of content and requires web UI/UX skills
 - Final output will be deployed via the web3privacy now Vercel account and pointed to the following subdomain: pbp.web3privacy.info (DNS to done by team)
+- Code must have comments, end of project documentation is not required (but appreciated). That said your functions and files should be easily understandable by other developers
 
 # Outputs
 
