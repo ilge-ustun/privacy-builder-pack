@@ -57,8 +57,8 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 p-0 bg-black text-white z-50">
-      <div className="p-4 relative z-100 bg-black flex md:space-x-5 items-center justify-between md:justify-center max-w-7xl mx-auto">
+    <nav className="fixed top-0 left-0 right-0 p-0 text-white z-50">
+      <div className="p-4 relative z-100 flex md:space-x-5 items-center justify-between md:justify-center max-w-7xl mx-auto">
         <Link
           href="/"
           className={`flex items-center space-x-2 whitespace-nowrap ${
@@ -69,7 +69,7 @@ export default function Navbar() {
           <div className="w-5 h-5 relative flex-shrink-0">
             <Image src="/navbar/privacy.svg" alt="Privacy Builder Pack" fill />
           </div>
-          <span className="text-white">Privacy Builder Pack</span>
+          <span className="text-white">Privacy Builder Packkkkk</span>
         </Link>
         <button
           className="md:hidden p-2 opacity-70 hover:opacity-100"
@@ -94,6 +94,7 @@ export default function Navbar() {
           </svg>
         </button>
 
+        {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-5">
           {navbarItems.map((item, index) => (
             <Link
@@ -114,21 +115,21 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`z-0 md:hidden fixed -translate-y-full top-16 left-0 right-0 bottom-0 bg-black transition-transform duration-300 transform ${
+        className={`md:hidden fixed -translate-y-full top-0 left-0 right-0 bottom-0 bg-black transition-transform duration-300 transform ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="max-w-7xl mx-auto p-4 space-y-4 overflow-y-auto h-full">
+        <div className="max-w-7xl mx-auto p-4 space-y-8 overflow-y-auto h-full pt-20">
           {navbarItems.map((item, index) => (
             <Link
               key={index}
               href={item.link}
-              className={`flex items-center space-x-2 p-2 ${
+              className={`flex items-center space-x-2 ${
                 pathname === item.link ? "opacity-100" : "opacity-70 hover:opacity-100"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              <div className="w-5 h-5 relative">
+              <div className="w-5 h-5 relative ">
                 <Image src={item.icon} alt={item.title} fill />
               </div>
               <span className="text-white">{item.title}</span>

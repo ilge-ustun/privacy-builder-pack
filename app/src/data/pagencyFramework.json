@@ -1,0 +1,149 @@
+[
+  {
+    "id": "1",
+    "title": "Humans",
+    "description": "Make products for them & not just for yourself. Focus on humans as communities, not just individuals.",
+    "sections": [
+      {
+        "title": "Personas",
+        "questions": ["Who are you building for?", "Why should they care?"]
+      },
+      {
+        "title": "Web3 services usage",
+        "questions": [
+          "What kind of web3 services this human uses?",
+          "What are the data breaches in those services?"
+        ]
+      },
+      {
+        "title": "Privacy",
+        "questions": [
+          "How aware is a person of the necessity for privacy protection?",
+          "How easily person would give up privacy in exchange for services or product features?",
+          "Why this human needs privacy protection?",
+          "What would happen with a human without additional privacy?"
+        ]
+      },
+      {
+        "title": "Personal data literacy",
+        "questions": [
+          "Does a person know how his/her/theirs data has been abused?",
+          "Does a person know how to protect himself/herself/themselves?",
+          "What kind of privacy-enhancing solutions does a person use?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Data",
+    "description": "Think of both on-chain & off-chain data when you are doing research.",
+    "sections": [
+      {
+        "title": "Aim",
+        "questions": ["What kind of data are you protecting?", "Why does this data matter?"]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Challenge",
+    "description": "Think of the ZK market that solves the challenge of preserving sensitive data while validating parts from KYC to age verification.",
+    "sections": [
+      {
+        "title": "List",
+        "questions": [
+          "What are the main barriers on your way?",
+          "How do they compromise the person, you, industry?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Threat Actors",
+    "description": "Actors could be both web2 or web3 native.",
+    "sections": [
+      {
+        "title": "List",
+        "questions": [
+          "Who is threatening privacy-balance?",
+          "How do these bad actors use personal data?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Privacy Layers",
+    "description": "Think of a privacy implication complexity: KYC+AML could be great for accountability in the USA, but it means the death penalty in Iran.",
+    "sections": [
+      {
+        "title": "Approach",
+        "questions": [
+          "What privacy layer are you contributing to?",
+          "What's a trade-off compared to other layers?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Solution",
+    "description": "Lots of Web3 solutions complement each other - an ecosystem-centric approach simplifies ideation/development.",
+    "sections": [
+      {
+        "title": "Brainstorm",
+        "questions": [
+          "How your idea empower humans?",
+          "How sustainable is your solution in 1-3-5 years?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Partners",
+    "description": "Partners should unlock value for you. Imagine a time when your solution has been implemented on a broader scale.",
+    "sections": [
+      {
+        "title": "Activation",
+        "questions": [
+          "What partners could scale your idea?",
+          "What kind of value do these partners add?",
+          "What kind of partners do you need to make this happen?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Resources",
+    "description": "Resource management could come in handy, helping to understand feasibility of idea for yourself & wider audiences (from hackathon jury to investors).",
+    "sections": [
+      {
+        "title": "Launch",
+        "questions": [
+          "What resources do you need for a start?",
+          "What resources do you need to sustain your idea (1-3 years)?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Success Metrics",
+    "description": "Always separate product performance metrics from the financial side.",
+    "sections": [
+      {
+        "title": "Product",
+        "questions": [
+          "How would you measure success?",
+          "What is the one ultimate metric to track?",
+          "What would they be for humans, partners or hackathon, organizers?",
+          "How metrics would change from MVP to ultimate Product-Market-Fit?"
+        ]
+      }
+    ]
+  }
+]
