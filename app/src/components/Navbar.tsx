@@ -61,18 +61,13 @@ export default function Navbar() {
       <div className="p-4 relative z-100 bg-black flex md:space-x-5 items-center justify-between md:justify-center max-w-7xl mx-auto">
         <Link
           href="/"
-          className={`flex items-center space-x-2 p-2 ${
+          className={`flex items-center space-x-2 whitespace-nowrap ${
             pathname === "/" ? "opacity-100" : "opacity-70 hover:opacity-100"
           }`}
           onClick={() => setIsMenuOpen(false)}
         >
-          <div className="w-5 h-5 relative">
-            <Image
-              src="/navbar/privacy.svg"
-              alt="Privacy Builder Pack"
-              fill
-              className="text-current"
-            />
+          <div className="w-5 h-5 relative flex-shrink-0">
+            <Image src="/navbar/privacy.svg" alt="Privacy Builder Pack" fill />
           </div>
           <span className="text-white">Privacy Builder Pack</span>
         </Link>
@@ -109,7 +104,7 @@ export default function Navbar() {
               }`}
             >
               <div className="w-5 h-5 relative">
-                <Image src={item.icon} alt={item.title} fill className="text-current" />
+                <Image src={item.icon} alt={item.title} fill />
               </div>
               <span className="text-white">{item.title}</span>
             </Link>
@@ -134,7 +129,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               <div className="w-5 h-5 relative">
-                <Image src={item.icon} alt={item.title} fill className="text-current" />
+                <Image src={item.icon} alt={item.title} fill />
               </div>
               <span className="text-white">{item.title}</span>
             </Link>
