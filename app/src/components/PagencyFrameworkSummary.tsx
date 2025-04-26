@@ -190,7 +190,7 @@ export default function PagencyFrameworkSummary() {
                 >
                   {item.id}. {item.title}
                 </h3>
-                <h4 style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>{item.description}</h4>
+                {/* <h4 style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>{item.description}</h4> */}
                 {item.sections.map((section, sIndex) => (
                   <div
                     key={sIndex}
@@ -213,7 +213,7 @@ export default function PagencyFrameworkSummary() {
                           boxShadow: "none",
                         }}
                       >
-                        <p
+                        {/* <p
                           style={{
                             fontSize: "0.875rem",
                             marginBottom: "0.25rem",
@@ -225,7 +225,7 @@ export default function PagencyFrameworkSummary() {
                           }}
                         >
                           {question}
-                        </p>
+                        </p> */}
                         <p
                           style={{
                             userSelect: "none",
