@@ -1,11 +1,21 @@
+"use client"
 import ExternalLink from "@/components/InlineExternalLink"
 import Image from "next/image"
 import ToolsCategories from "@/components/ToolsCategories"
 import tools1 from "@/data/tools.json"
 import tools2 from "@/data/privacyFocusedTools.json"
-
+import SearchTool from "@/components/SearchTool"
+import { useState } from "react"
 const tools = [...tools1, ...tools2]
 export default function Tools() {
+  const [searchQuery, setSearchQuery] = useState("")
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query)
+  }
+
+  console.log(searchQuery)
+
   return (
     <main className="relative min-h-screen bg-[#030303] pt-20 flex flex-col items-center">
       <div className="relative flex flex-col gap-8 items-center sm:items-start p-6 px-4 sm:px-6 pb-20 sm:p-20 container">
@@ -35,7 +45,7 @@ export default function Tools() {
           </div>
         </div>
 
-        {/* To do add search */}
+        <SearchTool onSearch={handleSearch} />
 
         <ToolsCategories toolsCategories={tools} />
       </div>
