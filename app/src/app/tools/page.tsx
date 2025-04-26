@@ -13,22 +13,25 @@ export default function Tools() {
           <Image src="/icons/tools.svg" alt="Tools" width={28} height={28} />
           <h1 className="text-white text-2xl">Web3 & Privacy Tools_</h1>
         </div>
-        <p>A curated collection of tools and resources.</p>
-        <div className="flex flex-row flex-wrap">
-          <div className="flex flex-row mr-8">
-            <span className="mr-2">→</span>{" "}
-            <ExternalLink href="https://haveibeenpwned.com" text="pwned?" />
-          </div>
-          <div className="flex flex-row mr-8">
-            <span className="mr-2">→</span>{" "}
-            <ExternalLink href="https://monitor.mozilla.org/breaches" text="Data Leaks" />
-          </div>
-          <div className="flex flex-row mr-8">
-            <span className="mr-2">→</span>{" "}
-            <ExternalLink href="https://privacytests.org/" text="Browser Privacy" />
-          </div>
-          <div className="flex flex-row mr-8">
-            <span className="mr-2">→</span> <ExternalLink href="" color="green" text="Contribute" />
+        <div>
+          <p className="mb-2">A curated collection of tools and resources.</p>
+          <div className="flex flex-row flex-wrap">
+            <div className="flex flex-row mr-8">
+              <span className="mr-2">→</span>{" "}
+              <ExternalLink href="https://haveibeenpwned.com" text="pwned?" />
+            </div>
+            <div className="flex flex-row mr-8">
+              <span className="mr-2">→</span>{" "}
+              <ExternalLink href="https://monitor.mozilla.org/breaches" text="Data Leaks" />
+            </div>
+            <div className="flex flex-row mr-8">
+              <span className="mr-2">→</span>{" "}
+              <ExternalLink href="https://privacytests.org/" text="Browser Privacy" />
+            </div>
+            <div className="flex flex-row mr-8">
+              <span className="mr-2">→</span>{" "}
+              <ExternalLink href="" color="green" text="Contribute" />
+            </div>
           </div>
         </div>
 
