@@ -18,7 +18,7 @@ export default function SearchTool({ onSearch }: SearchToolProps) {
   }
 
   return (
-    <div className="flex flex-row gap-2 w-full my-6">
+    <div className="flex flex-col sm:flex-row gap-2 w-full my-6">
       <div className="flex items-center thin-border text-white w-full p-4 grow">
         <Image src="/icons/search.svg" alt="Search Icon" width={23} height={23} />
         <input
