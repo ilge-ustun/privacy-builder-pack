@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${azeretMono.variable} ${azeretMono.variable} antialiased`}>
+    <html>
+      <body className={`${azeretMono.variable} ${azeretMono.variable} antialiased w-full`}>
         <Navbar />
         {children}
       </body>
