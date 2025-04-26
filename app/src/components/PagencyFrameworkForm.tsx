@@ -95,7 +95,7 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
 
       <div className="flex justify-between border-t border-white/30 mt-2 p-5">
         <button
-          className="text-white px-4 py-2 rounded-md border disabled:opacity-50 hover:cursor-pointer disabled:hover:cursor-default text-xs sm:text-base"
+          className="text-white px-4 py-2 rounded-md border disabled:opacity-50 hover:cursor-pointer disabled:hover:cursor-default text-xs sm:text-base hover-shine"
           onClick={handlePrevious}
           disabled={itemId === 1}
         >
@@ -103,7 +103,7 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
         </button>
         <button
           type="submit"
-          className="bg-white text-black px-4 py-2 rounded-md disabled:opacity-50 hover:cursor-pointer disabled:hover:cursor-default text-xs sm:text-base"
+          className="bg-white text-black px-4 py-2 rounded-md disabled:opacity-50 hover:cursor-pointer disabled:hover:cursor-default text-xs sm:text-base hover-shine"
         >
           {itemId === frameworkItems.length ? "Generate Summary" : "Next"}
         </button>

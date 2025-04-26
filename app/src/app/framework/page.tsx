@@ -25,7 +25,7 @@ function FrameworkContent() {
 
 export default function Framework() {
   return (
-    <main className="relative min-h-screen bg-[url('/background.png')] bg-cover bg-center bg-no-repeat pt-20 flex flex-col items-center">
+    <main className="relative min-h-screen bg-[url('/bg2.webp')] bg-cover bg-center bg-no-repeat pt-20 flex flex-col items-center">
       <Suspense>
         <FrameworkContent />
       </Suspense>

@@ -55,16 +55,9 @@ export default function PagencyFrameworkSummary() {
       <button
         onClick={handleDownload}
         disabled={isGenerating}
-        style={{
-          backgroundColor: "#22c55e",
-          color: "black",
-          padding: "0.625rem 1.25rem",
-          borderRadius: "0.375rem",
-          alignSelf: "center",
-          cursor: isGenerating ? "default" : "pointer",
-          opacity: isGenerating ? 0.5 : 1,
-          fontSize: "0.875rem",
-        }}
+        className={`bg-green-500 text-black px-5 py-2.5 rounded-md self-center hover-shine hover:cursor-pointer cursor-${
+          isGenerating ? "default" : "pointer"
+        } opacity-${isGenerating ? "50" : "100"} text-sm`}
       >
         Download summary
       </button>

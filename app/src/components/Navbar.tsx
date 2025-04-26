@@ -85,9 +85,9 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               <div className="w-5 h-5 relative ">
-                <Image src={item.icon} alt={item.shortTitle} fill />
+                <Image src={item.icon} alt={item.title} fill />
               </div>
-              <span className="text-white">{item.shortTitle}</span>
+              <span className="text-white">{item.title}</span>
             </Link>
           ))}
         </div>

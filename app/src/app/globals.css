@@ -30,3 +30,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-azeret-mono), monospace;
 }
+
+.hover-shine {
+  @apply hover:shadow-[0_0_15px_rgba(255,255,255,0.5)];
+}
