@@ -10,9 +10,9 @@ function FrameworkContent() {
   const itemId = parseInt(searchParams.get("item") ?? "1")
 
   return (
-    <div className="relative z-10 flex flex-col gap-[32px] items-center sm:items-start p-5 px-3 sm:px-5 pb-20 sm:p-20">
+    <div className="relative flex flex-col gap-8 items-center sm:items-start p-5 px-3 sm:px-5 pb-20 sm:p-20 container">
       <div className="w-full flex gap-2 space-x-2">
-        <Image src="/navbar/framework.svg" alt="Pagency Framework" width={28} height={28} />
+        <Image src="/icons/framework.svg" alt="Pagency Framework" width={28} height={28} />
         <h1 className="text-white text-2xl">Pagency Framework_</h1>
       </div>
       <div>
@@ -25,7 +25,7 @@ function FrameworkContent() {
 
 export default function Framework() {
   return (
-    <main className="relative min-h-screen bg-[url('/background.png')] bg-cover bg-center bg-no-repeat pt-20">
+    <main className="relative min-h-screen bg-[url('/background.png')] bg-cover bg-center bg-no-repeat pt-20 flex flex-col items-center">
       <Suspense>
         <FrameworkContent />
       </Suspense>

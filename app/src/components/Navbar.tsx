@@ -3,54 +3,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
+import coreComponents from "@/data/coreComponents.json"
 
-const navbarItems = [
-  {
-    title: "Glossary",
-    link: "/glossary",
-    icon: "/navbar/glossary.svg",
-  },
-  {
-    title: "Ideas",
-    link: "",
-    icon: "/navbar/ideas.svg",
-  },
-  {
-    title: "Cases",
-    link: "/cases",
-    icon: "/navbar/cases.svg",
-  },
-  {
-    title: "Framework",
-    link: "/framework",
-    icon: "/navbar/framework.svg",
-  },
-  {
-    title: "Tools",
-    link: "/tools",
-    icon: "/navbar/tools.svg",
-  },
-  {
-    title: "Tips",
-    link: "/tips",
-    icon: "/navbar/tips.svg",
-  },
-  {
-    title: "Stacks",
-    link: "",
-    icon: "/navbar/stacks.svg",
-  },
-  {
-    title: "Explorer",
-    link: "",
-    icon: "/navbar/explorer.svg",
-  },
-  {
-    title: "TailsOS",
-    link: "/tails-os",
-    icon: "/navbar/tailsos.svg",
-  },
-]
+const navbarItems = coreComponents.slice(1)
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -67,7 +22,7 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(false)}
         >
           <div className="w-5 h-5 relative flex-shrink-0">
-            <Image src="/navbar/privacy.svg" alt="Privacy Builder Pack" fill />
+            <Image src="/icons/privacy.svg" alt="Privacy Builder Pack" fill />
           </div>
           <span className="text-white">Privacy Builder Pack</span>
         </Link>
@@ -105,9 +60,9 @@ export default function Navbar() {
               }`}
             >
               <div className="w-5 h-5 relative">
-                <Image src={item.icon} alt={item.title} fill />
+                <Image src={item.icon} alt={item.shortTitle} fill />
               </div>
-              <span className="text-white">{item.title}</span>
+              <span className="text-white">{item.shortTitle}</span>
             </Link>
           ))}
         </div>
@@ -130,9 +85,9 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               <div className="w-5 h-5 relative ">
-                <Image src={item.icon} alt={item.title} fill />
+                <Image src={item.icon} alt={item.shortTitle} fill />
               </div>
-              <span className="text-white">{item.title}</span>
+              <span className="text-white">{item.shortTitle}</span>
             </Link>
           ))}
         </div>
