@@ -1,6 +1,6 @@
 import { FrameworkItem } from "@/types/framework"
 import frameworkItems from "@/data/pagencyFramework.json"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/navigation"
 import { saveFormData, getFormData } from "@/utils/indexedDB"
 import Link from "next/link"
@@ -13,6 +13,7 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
   const router = useRouter()
   const item = (frameworkItems as FrameworkItem[]).find((item) => item.id === String(itemId))
   const [formData, setFormData] = useState<Record<string, string>>({})
+  const firstTextareaRef = useRef<HTMLTextAreaElement>(null)
 
   const bars = Array.from({ length: frameworkItems.length }, (_, i) => i + 1)
 
@@ -30,6 +31,12 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
       }
     }
     loadSavedData()
+  }, [itemId])
+
+  useEffect(() => {
+    if (firstTextareaRef.current) {
+      firstTextareaRef.current.focus()
+    }
   }, [itemId])
 
   if (!item) return null
@@ -66,6 +73,13 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault()
+      handleSubmit(e as unknown as React.FormEvent<HTMLFormElement>)
+    }
+  }
+
   return (
     <>
       <div className="w-full max-w-3xl self-center flex items-center justify-center gap-2 px-2 my-4">
@@ -100,12 +114,14 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
               <div key={qIndex} className="flex flex-col gap-1 py-2">
                 <label className="text-sm">{question}</label>
                 <textarea
+                  ref={index === 0 && qIndex === 0 ? firstTextareaRef : null}
                   className="bg-black/20 thin-border p-2 text-white"
                   name={`${section.title}-${qIndex}`}
                   value={formData[`${section.title}-${qIndex}`] || ""}
                   onChange={(e) =>
                     handleTextAreaChange(`${section.title}-${qIndex}`, e.target.value)
                   }
+                  onKeyDown={handleKeyDown}
                 />
               </div>
             ))}
