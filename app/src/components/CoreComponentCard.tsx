@@ -20,6 +20,7 @@ export default function CoreComponentCard({ component }: { component: CoreCompon
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
       onTouchEnd={() => setIsHovered(false)}
+      target={component.external ? "_blank" : "_self"}
     >
       <Image
         src={component.icon}

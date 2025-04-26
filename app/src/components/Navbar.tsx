@@ -58,6 +58,7 @@ export default function Navbar() {
               className={`flex items-center space-x-2 ${
                 pathname === item.link ? "opacity-100" : "opacity-70 hover:opacity-100"
               }`}
+              target={item.external ? "_blank" : "_self"}
             >
               <div className="w-5 h-5 relative">
                 <Image src={item.icon} alt={item.shortTitle} fill />
@@ -82,6 +83,7 @@ export default function Navbar() {
               className={`flex items-center space-x-2 ${
                 pathname === item.link ? "opacity-100" : "opacity-70 hover:opacity-100"
               }`}
+              target={item.external ? "_blank" : "_self"}
               onClick={() => setIsMenuOpen(false)}
             >
               <div className="w-5 h-5 relative ">

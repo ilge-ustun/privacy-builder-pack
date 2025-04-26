@@ -3,6 +3,7 @@ export interface CoreComponent {
   shortTitle: string
   description: string
   link: string
+  external: boolean
   icon: string
 }
 

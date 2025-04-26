@@ -4,13 +4,15 @@
     "shortTitle": "Glossary",
     "description": "Comprehensive guide to privacy and security terminology.",
     "link": "/glossary",
+    "external": false,
     "icon": "/icons/glossary.svg"
   },
   {
     "title": "Ideas Generator",
     "shortTitle": "Ideas",
     "description": "Spark creativity with our privacy-focused project ideas.",
-    "link": "",
+    "link": "https://ideas.web3privacy.info",
+    "external": true,
     "icon": "/icons/ideas.svg"
   },
   {
@@ -18,6 +20,7 @@
     "shortTitle": "Cases",
     "description": "Real-world privacy challenges and solutions from around the globe.",
     "link": "/cases",
+    "external": false,
     "icon": "/icons/cases.svg"
   },
   {
@@ -25,6 +28,7 @@
     "shortTitle": "Framework",
     "description": "Structured approach to building privacy-enhancing solutions.",
     "link": "/framework",
+    "external": false,
     "icon": "/icons/framework.svg"
   },
   {
@@ -32,6 +36,7 @@
     "shortTitle": "Tools",
     "description": "Essential resources for privacy-focused development.",
     "link": "/tools",
+    "external": false,
     "icon": "/icons/tools.svg"
   },
   {
@@ -39,20 +44,23 @@
     "shortTitle": "Tips",
     "description": "Guidelines for implementing privacy by design.",
     "link": "/tips",
+    "external": false,
     "icon": "/icons/tips.svg"
   },
   {
     "title": "Personal Stacks",
     "shortTitle": "Stacks",
     "description": "Overview of privacy builders personal privacy solutions.",
-    "link": "",
+    "link": "https://stacks.web3privacy.info/",
+    "external": true,
     "icon": "/icons/stacks.svg"
   },
   {
     "title": "Explorer",
     "shortTitle": "Explorer",
     "description": "Essential resources for privacy-focused development.",
-    "link": "",
+    "link": "https://explorer.web3privacy.info/",
+    "external": true,
     "icon": "/icons/explorer.svg"
   },
   {
@@ -60,6 +68,7 @@
     "shortTitle": "TailsOS",
     "description": "Guidelines for implementing privacy by design.",
     "link": "/tails-os",
+    "external": false,
     "icon": "/icons/tailsos.svg"
   }
 ]
