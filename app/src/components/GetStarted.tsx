@@ -15,7 +15,7 @@ export default function GetStarted() {
       </div>
       <p>Let´s revive the crypto core values and build meaningful applications!</p>
 
-      <div className="flex flex-col thin-border w-full max-w-3xl self-center p-5 px-3 sm:px-5 text-white space-y-8">
+      <div className="flex flex-col thin-border w-full max-w-3xl self-center p-6 px-3 sm:px-6 text-white space-y-8">
         <h3 className="text-white text-xl font-bold">1. The Reason Behind Privacy Builder Pack</h3>
         <p className="text-white">
           Drawing from our experiences at <ExternalLink href="https://ethbrno.cz/" text="ETHBrno" />
@@ -31,7 +31,7 @@ export default function GetStarted() {
         </p>
       </div>
 
-      <div className="flex flex-col thin-border w-full max-w-3xl self-center p-5 px-3 sm:px-5 text-white space-y-8">
+      <div className="flex flex-col thin-border w-full max-w-3xl self-center p-6 px-3 sm:px-6 text-white space-y-8">
         <h3 className="text-white text-xl font-bold">2. Privacy is Increasingly Under Threat</h3>
         <p className="text-white">
           Building sustainable, privacy-enhancing solutions has never been more critical.
@@ -59,7 +59,7 @@ export default function GetStarted() {
         </div>
       </div>
 
-      <div className="flex flex-col thin-border w-full max-w-3xl self-center p-5 px-3 sm:px-5 text-white space-y-8">
+      <div className="flex flex-col thin-border w-full max-w-3xl self-center p-6 px-3 sm:px-6 text-white space-y-8">
         <h3 className="text-white text-xl font-bold">3. Why It Matters and What to Do?</h3>
 
         <div className="flex flex-col sm:flex-row space-y-8 space-x-8">

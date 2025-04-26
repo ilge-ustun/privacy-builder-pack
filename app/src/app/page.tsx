@@ -8,7 +8,7 @@ import Link from "next/link"
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-[#030303] bg-[url('/bg1.webp')] bg-contain sm:bg-cover bg-top-right bg-no-repeat pt-20 flex flex-col items-center">
-      <div className="relative flex flex-col gap-8 items-center sm:items-start p-5 px-3 sm:px-5 pb-20 sm:p-20 container">
+      <div className="relative flex flex-col gap-8 items-center sm:items-start p-6 px-4 sm:px-6 pb-20 sm:p-20 container">
         <Hero />
         <div className="flex space-x-4 mt-2 mb-20 self-start">
           <Link

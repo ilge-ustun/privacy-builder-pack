@@ -9,7 +9,11 @@ const glitchedSubtitle = "b«¶%+_¢·b+Zȯz·¢{r{az˫½襕©۹¨"
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false)
   return (
-    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+    <div
+      className="self-start"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold mb-4">
         {isHovered ? title : glitchedTitle}
       </h1>
