@@ -1,0 +1,189 @@
+[
+  {
+    "category": "Fundamental Concepts",
+    "terms": [
+      {
+        "term": "Privacy",
+        "definition": "The ability to control who has access to personal information and how it is used."
+      },
+      {
+        "term": "Anonymity",
+        "definition": "The state of being unrecognizable or unidentified."
+      },
+      {
+        "term": "Pseudonymity",
+        "definition": "The use of a false name, often used to protect identity."
+      },
+      {
+        "term": "Zero-Knowledge Proof (ZKP)",
+        "definition": "A cryptographic protocol that allows one party (the prover) to demonstrate to another party (the verifier) that they know a value, without revealing that value."
+      }
+    ]
+  },
+  {
+    "category": "Blockchain-Specific Concepts",
+    "terms": [
+      {
+        "term": "Privacy-Preserving Smart Contracts",
+        "definition": "Smart contracts that use cryptographic techniques to protect the privacy of their users and data."
+      },
+      {
+        "term": "Private Transactions",
+        "definition": "Transactions that are conducted off-chain or using privacy-preserving techniques to protect the sender and recipient's identities."
+      },
+      {
+        "term": "Privacy-Preserving Wallets",
+        "definition": "Wallets that use cryptographic techniques to protect the privacy of their users."
+      },
+      {
+        "term": "Privacy-Preserving Oracles",
+        "definition": "Oracles that provide data to smart contracts without revealing the content of that data."
+      },
+      {
+        "term": "Stealth Address",
+        "definition": "Wallet address that is cryptographically tied to ones' public address, but that is only revealed to the parties transacting."
+      }
+    ]
+  },
+
+  {
+    "category": "Privacy-Preserving Techniques",
+    "terms": [
+      {
+        "term": "Homomorphic Encryption",
+        "definition": "A type of encryption that allows arbitrary computations to be performed on encrypted data without decrypting it first."
+      },
+      {
+        "term": "Fully Homomorphic Encryption",
+        "definition": "Can perform any computation on encrypted data, not just linear operations."
+      },
+      {
+        "term": "Secure Multi-Party Computation (MPC)",
+        "definition": "A cryptographic technique that allows multiple parties to compute a function over their inputs without revealing their individual inputs to each other."
+      },
+      {
+        "term": "Differential Privacy",
+        "definition": "A technique that adds noise to data to protect individual privacy while preserving statistical accuracy."
+      },
+      {
+        "term": "Ring Signatures",
+        "definition": "A digital signature scheme that allows a group of individuals to sign a message without revealing which member of the group signed it."
+      },
+      {
+        "term": "Blind Signatures",
+        "definition": "A signature scheme that allows a signer to sign a message without knowing its contents, providing anonymity for the message sender."
+      }
+    ]
+  },
+  {
+    "category": "Tools and Protocols",
+    "terms": [
+      {
+        "term": "zk-SNARKs",
+        "definition": "Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge. A type of ZKP that allow one party to prove to another that they know a value without revealing that value or any additional information."
+      },
+      {
+        "term": "zk-STARKs",
+        "definition": "Zero-Knowledge Scalable Transparent Arguments of Knowledge. A type of ZKP that is more efficient than zk-SNARKs and does not require a trusted setup."
+      },
+      {
+        "term": "Bulletproofs",
+        "definition": "A type of ZKP that is more efficient than zk-SNARKs and zk-STARKs by using range proofs, aggregation, optimized verification, and transparency."
+      },
+      {
+        "term": "Privacy-Preserving Ethereum Protocols",
+        "definition": "Protocols such as Aztec Protocol, Tornado Cash, and Railgun that aim to provide privacy for Ethereum transactions."
+      }
+    ]
+  },
+  {
+    "category": "Cryptographic Techniques",
+    "terms": [
+      {
+        "term": "Advanced Encryption Standard (AES)",
+        "definition": "A widely used symmetric-key encryption algorithm."
+      },
+      {
+        "term": "Blowfish",
+        "definition": "A symmetric-key encryption algorithm known for its speed and security."
+      },
+      {
+        "term": "Twofish",
+        "definition": "A symmetric-key encryption algorithm that was a finalist in the AES competition."
+      },
+      {
+        "term": "Lattice-Based Cryptography",
+        "definition": "A type of cryptography that is resistant to quantum computing attacks."
+      },
+      {
+        "term": "Multi-Party Key Escrow",
+        "definition": "A technique that allows multiple parties to share the responsibility for managing a private key."
+      },
+      {
+        "term": "Threshold Signatures",
+        "definition": "A type of signature scheme that allows a group of individuals to sign a message without revealing which member of the group signed it."
+      },
+      {
+        "term": "Elliptic Curve Cryptography (ECC)",
+        "definition": "A type of public-key cryptography that uses points on an elliptic curve for encryption and digital signatures, offering smaller key sizes and faster computations than traditional methods."
+      },
+      {
+        "term": "Digital Signature Algorithm (DSA)",
+        "definition": "A digital signature algorithm that uses modular exponentiation and discrete logarithms to verify the authenticity of digital documents."
+      },
+      {
+        "term": "Schnorr Signatures",
+        "definition": "A type of digital signature scheme that is more efficient and simpler to implement than DSA, often used in Bitcoin and other cryptocurrencies."
+      },
+      {
+        "term": "SHA-256",
+        "definition": "A widely used cryptographic hash function that produces a 256-bit hash value."
+      },
+      {
+        "term": "SHA-3",
+        "definition": "A newer cryptographic hash function selected as the winner of the NIST hash function competition, offering improved security and performance."
+      },
+      {
+        "term": "BLAKE2",
+        "definition": "A cryptographic hash function known for its speed and security, often used in various applications, including blockchain technology."
+      },
+      {
+        "term": "Steganography",
+        "definition": "A technique for hiding information within other information, making it difficult to detect that it is there."
+      },
+      {
+        "term": "Watermarking",
+        "definition": "A technique for embedding a hidden message or identification code within a piece of data."
+      },
+      {
+        "term": "Oblivious Transfer",
+        "definition": "A cryptographic protocol that allows two parties to exchange information without either party revealing their information to the other."
+      }
+    ]
+  },
+  {
+    "category": "Broader Privacy Concepts",
+    "terms": [
+      {
+        "term": "Data Minimization",
+        "definition": "The principle of collecting and processing only the data that is necessary for a specific purpose."
+      },
+      {
+        "term": "Purpose Limitation",
+        "definition": "The principle that data should only be used for the purposes for which it was originally collected."
+      },
+      {
+        "term": "Data Retention Limitation",
+        "definition": "The principle that data should not be kept for longer than necessary."
+      },
+      {
+        "term": "Data Integrity",
+        "definition": "The principle that data should be accurate, complete, and up-to-date."
+      },
+      {
+        "term": "Data Security",
+        "definition": "The principle that data should be protected from unauthorized access, disclosure, alteration, or destruction."
+      }
+    ]
+  }
+]
