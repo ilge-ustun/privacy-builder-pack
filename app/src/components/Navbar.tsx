@@ -3,9 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
-import coreComponents from "@/data/coreComponents.json"
-
-const navbarItems = coreComponents.slice(1)
+import navbarItems from "@/data/coreComponents.json"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
