@@ -13,7 +13,9 @@ export default function CoreComponents() {
         onMouseLeave={() => setIsHovered(false)}
       >
         <Image src="/icons/locker.svg" alt="Core Components" width={28} height={28} />
-        <h1 className="text-white text-2xl">{isHovered ? "Core Components_" : "©¢w§¶Ï"}</h1>
+        <h1 className="text-white text-2xl font-bold">
+          {isHovered ? "Core Components_" : "©¢w§¶Ï"}
+        </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
         {coreComponents.map((component) => (

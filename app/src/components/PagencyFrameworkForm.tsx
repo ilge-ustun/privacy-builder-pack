@@ -65,7 +65,7 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
 
   return (
     <form
-      className="flex flex-col border border-white/50 rounded-md w-full max-w-3xl self-center p-5 px-3 sm:px-5 text-white gap-4"
+      className="flex flex-col thin-border w-full max-w-3xl self-center p-5 px-3 sm:px-5 text-white gap-4"
       onSubmit={handleSubmit}
     >
       <h2 className="text-xl font-bold">
@@ -74,16 +74,13 @@ export default function PagencyFrameworkForm({ itemId }: Props) {
       <p className="text-white text-sm">{item.description}</p>
 
       {item.sections.map((section, index) => (
-        <div
-          key={index}
-          className="flex flex-col gap-2 border border-white/50 rounded-md p-5 px-3 sm:px-5"
-        >
+        <div key={index} className="flex flex-col gap-2 thin-border p-5 px-3 sm:px-5">
           <h3 className="text-green font-bold">{section.title}</h3>
           {section.questions.map((question, qIndex) => (
             <div key={qIndex} className="flex flex-col gap-1 py-2">
               <label className="text-sm">{question}</label>
               <textarea
-                className="bg-black/20 border border-white/20 rounded p-2 text-white"
+                className="bg-black/20 thin-border p-2 text-white"
                 name={`${section.title}-${qIndex}`}
                 value={formData[`${section.title}-${qIndex}`] || ""}
                 onChange={(e) => handleTextAreaChange(`${section.title}-${qIndex}`, e.target.value)}

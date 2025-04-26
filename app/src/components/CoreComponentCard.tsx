@@ -13,7 +13,7 @@ export default function CoreComponentCard({ component }: { component: CoreCompon
     <Link
       key={component.title}
       href={component.link}
-      className="group relative flex flex-col space-y-2 items-start p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-white/20 transition-all duration-300 hover-shine"
+      className="group relative flex flex-col space-y-2 items-start p-6 bg-white/5 backdrop-blur-sm thin-border hover:border-white/30 transition-all duration-300 hover-shine min-h-46"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
