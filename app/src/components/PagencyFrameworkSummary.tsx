@@ -11,6 +11,25 @@ export default function PagencyFrameworkSummary() {
   const contentRef = useRef<HTMLDivElement>(null)
   const [isGenerating, setIsGenerating] = useState(false)
 
+  const [columnCount, setColumnCount] = useState(3)
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      if (window.innerWidth <= 1024) {
+        setColumnCount(1)
+        // } else if (window.innerWidth <= 1280) {
+        //   setColumnCount(2)
+      } else {
+        setColumnCount(3)
+      }
+    }
+
+    checkScreenSize()
+    window.addEventListener("resize", checkScreenSize)
+
+    return () => window.removeEventListener("resize", checkScreenSize)
+  }, [])
+
   useEffect(() => {
     const loadAllData = async () => {
       try {
@@ -61,6 +80,8 @@ export default function PagencyFrameworkSummary() {
       >
         Download summary
       </button>
+
+      {/* Downloadable summary, use inline styles to avoid layout shift */}
       <div
         ref={contentRef}
         style={{
@@ -126,7 +147,7 @@ export default function PagencyFrameworkSummary() {
         </div>
         <div
           style={{
-            columnCount: 3,
+            columnCount: columnCount,
             columnGap: "1rem",
             margin: "0 auto",
             userSelect: "none",
