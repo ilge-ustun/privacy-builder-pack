@@ -1,0 +1,200 @@
+[
+  {
+    "category": "Integrated Development Environments (IDE)",
+    "description": "Development libraries and frameworks.",
+    "items": [
+      {
+        "name": "Remix",
+        "link": "https://remix.ethereum.org/",
+        "description": "A web-based IDE for developing smart contracts.",
+        "tags": ["ethereum", "framework", "browser"]
+      },
+      {
+        "name": "ChainIDE",
+        "link": "https://chainide.com/",
+        "description": "A cloud-based multi-chain IDE.",
+        "tags": ["ethereum", "framework", "decentralised", "browser"]
+      },
+      {
+        "name": "Hardhat",
+        "link": "https://hardhat.org/",
+        "description": "A development environment focused on flexibility and performance.",
+        "tags": ["ethereum", "framework"]
+      },
+      {
+        "name": "Scaffold-ETH 2",
+        "link": "https://scaffoldeth.io/",
+        "description": "Open source forkable Ethereum dev stack.",
+        "tags": ["ethereum", "framework"]
+      },
+      {
+        "name": "Foundry",
+        "link": "https://getfoundry.sh/",
+        "description": "Manages your dependencies, compiles your project, runs tests, and deploys.",
+        "tags": ["ethereum", "framework"]
+      }
+    ]
+  },
+  {
+    "category": "API Libraries",
+    "description": "Eensure data communication and integration.",
+    "items": [
+      {
+        "name": "Web3.js",
+        "link": "https://web3js.org/",
+        "description": "A JavaScript library for interacting with Ethereum nodes.",
+        "tags": ["ethereum", "blockchain", "framework"]
+      },
+      {
+        "name": "Ethers.js",
+        "link": "https://ethers.org/",
+        "description": "A modern, flexible JavaScript library for interacting with Ethereum.",
+        "tags": ["ethereum", "blockchain", "framework"]
+      },
+      {
+        "name": "Web3.py",
+        "link": "https://web3py.readthedocs.io/en/stable/",
+        "description": "A Python library for interacting with Ethereum nodes.",
+        "tags": ["ethereum", "blockchain", "framework"]
+      },
+      {
+        "name": "Wagmi",
+        "link": "https://wagmi.sh/",
+        "description": "Wagmi Core is a VanillaJS library for Ethereum.",
+        "tags": ["ethereum", "framework"]
+      }
+    ]
+  },
+  {
+    "category": "Ethereum Blockchain Explorers",
+    "description": "Explore Ethereum transactions and smart contracts.",
+    "items": [
+      {
+        "name": "Etherscan",
+        "link": "https://etherscan.io/",
+        "description": "A popular Ethereum blockchain explorer with a wealth of tools and data.",
+        "tags": ["ethereum", "blockchain", "resources"]
+      },
+      {
+        "name": "Blockscout",
+        "link": "https://www.blockscout.com/",
+        "description": "Open-source, universally accessible, and fully customizable.",
+        "tags": ["ethereum", "blockchain", "resources", "decentralised"]
+      },
+      {
+        "name": "Otterscan",
+        "link": "https://otterscan.io/",
+        "description": "A blazingly fast, local, Ethereum block explorer built on top of Erigon.",
+        "tags": ["ethereum", "blockchain", "resources"]
+      },
+      {
+        "name": "Blockchair",
+        "link": "https://blockchair.com/",
+        "description": "Blockchain explorer, analytics and web services.",
+        "tags": ["blockchain", "resources", "search"]
+      },
+      {
+        "name": "Beaconcha.in",
+        "link": "https://beaconcha.in/",
+        "description": "Open-source Ethereum explorer.",
+        "tags": ["ethereum", "blockchain", "resources"]
+      },
+      {
+        "name": "Blobscan",
+        "link": "https://blobscan.com/",
+        "description": "The first EIP4844 Blob Transaction explorer.",
+        "tags": ["ethereum", "blockchain", "resources", "EIP"]
+      }
+    ]
+  },
+  {
+    "category": "Privacy-Related EIPs & Standards",
+    "description": "",
+    "items": [
+      {
+        "name": "EIP-7503",
+        "link": "https://eips.ethereum.org/EIPS/eip-7503",
+        "description": "Enables anonymous ETH transfers using zero-knowledge proofs without third-party mixers.",
+        "tags": ["EIP", "zero-knowledge", "anonymity", "privacy", "encryption"]
+      },
+      {
+        "name": "EIP-627",
+        "link": "https://eips.ethereum.org/EIPS/eip-627",
+        "description": "Specifies Whisper protocol for encrypted, peer-to-peer messaging.",
+        "tags": ["EIP", "encryption", "protocol", "p2p", "privacy"]
+      },
+      {
+        "name": "EIP-600",
+        "link": "https://eips.ethereum.org/EIPS/eip-600",
+        "description": "Defines purpose-based HD wallet paths for better identity separation.",
+        "tags": ["EIP", "privacy", "security", "standards"]
+      },
+      {
+        "name": "EIP-601",
+        "link": "https://eips.ethereum.org/EIPS/eip-601",
+        "description": "Outlines a structured hierarchy for Ethereum HD wallets to improve privacy.",
+        "tags": ["EIP", "privacy", "security", "standards"]
+      },
+      {
+        "name": "EIP-1344",
+        "link": "https://eips.ethereum.org/EIPS/eip-1344",
+        "description": "Adds chain ID to prevent cross-chain transaction replays.",
+        "tags": ["EIP", "security", "standards"]
+      },
+      {
+        "name": "ERC-2334",
+        "link": "https://eips.ethereum.org/EIPS/eip-2334",
+        "description": "Introduces HD wallet structure for Ethereum 2.0 using BLS keys.",
+        "tags": ["EIP", "ethereum", "cryptography", "privacy"]
+      },
+      {
+        "name": "ERC-2386",
+        "link": "https://eips.ethereum.org/EIPS/eip-2386",
+        "description": "Proposes a format for securely storing Ethereum 2.0 wallet definitions.",
+        "tags": ["EIP", "ethereum", "security", "privacy"]
+      }
+    ]
+  },
+  {
+    "category": "Security Tools",
+    "description": "Software security with tools designed to protect against privacy threats and vulnerabilities.",
+    "items": [
+      {
+        "name": "Apeworx",
+        "link": "https://apeworx.io/",
+        "description": "Dev tools for smart contract engineers and data scientists.",
+        "tags": ["security", "ethereum", "framework"]
+      },
+      {
+        "name": "Slither",
+        "link": "https://pypi.org/project/slither-analyzer/",
+        "description": "A Solidity and Vyper static analysis framework written in Python 3.",
+        "tags": ["security", "framework", "ethereum"]
+      },
+      {
+        "name": "Cyfrin",
+        "link": "https://www.cyfrin.io/",
+        "description": "Rust-based Solidity AST analyzer.",
+        "tags": ["security", "framework", "ethereum"]
+      },
+      {
+        "name": "TOSINT",
+        "link": "https://github.com/drego85/tosint",
+        "description": "Telegram OSINT tool to extract information from Telegram Bots and Channels.",
+        "tags": ["osint", "security"]
+      },
+      {
+        "name": "Awesome OSINT",
+        "link": "https://github.com/jivoi/awesome-osint",
+        "description": "A curated list of awesome things related to open-source intelligence.",
+        "tags": ["osint", "resources"]
+      },
+      {
+        "name": "Awesome Onchain Investigation Handbook",
+        "link": "https://github.com/OffcierCia/On-Chain-Investigations-Tools-List",
+        "description": "A curated list of onchain investigation tools.",
+        "tags": ["osint", "resources", "blockchain"]
+      }
+    ]
+  }
+]

@@ -19,14 +19,18 @@ export default function Collapse({
   const [isOpen, setIsOpen] = useState(defaultOpen)
 
   return (
-    <div className="w-full thin-border overflow-hidden p-5 hover-shine hover:border-white">
+    <div
+      className={`w-full thin-border overflow-hidden p-5 hover:border-white ${
+        isOpen ? "" : "hover-shine"
+      }`}
+    >
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-baseline justify-between transition-colors hover:cursor-pointer"
       >
         <div className="flex flex-col items-start">
           <h3 className="text-lg font-bold text-white text-left">{title}</h3>
-          {subtitle && <p className="text-sm text-white mt-1">{subtitle}</p>}
+          {subtitle && <p className="text-sm text-white mt-1 text-left">{subtitle}</p>}
         </div>
         <Image
           src="/icons/chevron.svg"

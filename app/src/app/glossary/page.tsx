@@ -5,6 +5,7 @@ import glossary from "@/data/glossary.json"
 import Collapse from "@/components/Collapse"
 import { GlossaryCategory, GlossaryTerm } from "@/types/glossary"
 import Image from "next/image"
+
 function GlossaryContent() {
   const itemsPerColumn = Math.ceil(glossary.length / 3)
 
@@ -37,7 +38,7 @@ function GlossaryContent() {
                         }`}
                       >
                         <h3 className="text-green font-bold">{term.term}</h3>
-                        <p className="text-white/80 text-sm">{term.definition}</p>
+                        <p className="text-white/80 text-sm mt-2">{term.definition}</p>
                       </div>
                     ))}
                   </div>
