@@ -4,7 +4,7 @@ import Image from "next/image"
 import PagencyFrameworkForm from "@/components/PagencyFrameworkForm"
 import { useSearchParams } from "next/navigation"
 import PagencyFrameworkSummary from "@/components/PagencyFrameworkSummary"
-
+import FrameworkExamples from "@/components/FrameworkExamples"
 function FrameworkContent() {
   const searchParams = useSearchParams()
   const itemId = parseInt(searchParams.get("item") ?? "1")
@@ -19,6 +19,7 @@ function FrameworkContent() {
         A structured approach to building privacy-enhancing applications that make a real impact.
       </div>
       {itemId === 0 ? <PagencyFrameworkSummary /> : <PagencyFrameworkForm itemId={itemId} />}
+      <FrameworkExamples />
     </div>
   )
 }

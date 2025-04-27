@@ -2,31 +2,31 @@
   {
     "title": "Privacy Glossary",
     "description": "made by brave",
-    "image": "/img/brave.png",
+    "image": "/images/brave.png",
     "link": "https://brave.com/glossary/"
   },
   {
     "title": "Terms and Definitions",
     "description": "made by nist",
-    "image": "/img/nist.svg",
+    "image": "/images/nist.svg",
     "link": "https://csrc.nist.gov/glossary"
   },
   {
     "title": "Def Con Glossary",
     "description": "made by defconparrot",
-    "image": "/img/defcon.png",
+    "image": "/images/defcon.png",
     "link": "https://defcon-glossary.netlify.app/"
   },
   {
     "title": "Dictionary of Cryptography",
     "description": "made by ritter",
-    "image": "/img/ritter.png",
+    "image": "/images/ritter.png",
     "link": "http://www.ciphersbyritter.com/GLOSSARY.HTM"
   },
   {
     "title": "Cyber Security Terms",
     "description": "made by sans",
-    "image": "/img/sans.png",
+    "image": "/images/sans.png",
     "link": "https://www.sans.org/security-resources/glossary-of-terms/"
   }
 ]

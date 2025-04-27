@@ -7,7 +7,7 @@ export default function GlossarySuggestions() {
 
   return (
     <div className="w-full mt-32 border-t border-white/20 pt-24 px-0 md:px-24">
-      <h3 className="text-white font-bold mb-12 text-2xl">$ suggestions.log</h3>
+      <h3 className="text-white font-bold mb-12 text-xl">$ suggestions.log</h3>
       <div className="flex flex-col md:flex-row gap-4">
         {columns.map((column, columnIndex) => (
           <div key={columnIndex} className="w-full md:w-1/3 flex flex-col gap-4">
