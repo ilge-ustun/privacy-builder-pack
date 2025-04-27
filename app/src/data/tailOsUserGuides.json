@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Install Tails",
+    "url": "https://tails.net/install/index.en.html"
+  },
+  {
+    "title": "Protect your identity",
+    "url": "https://tails.net/doc/about/warnings/identity/index.en.html"
+  },
+  {
+    "title": "Starting Tails on PC",
+    "url": "https://tails.net/doc/first_steps/start/pc/index.en.html"
+  },
+  {
+    "title": "Starting Tails on Mac",
+    "url": "https://tails.net/doc/first_steps/start/mac/index.en.html"
+  }
+]

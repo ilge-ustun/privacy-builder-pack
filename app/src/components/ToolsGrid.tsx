@@ -1,15 +1,9 @@
 import { Tool } from "@/types/tools"
 import ToolCard from "@/components/ToolCard"
+import splitIntoColumns from "@/utils/splitIntoColumns"
 
 export default function ToolsGrid({ tools }: { tools: Tool[] }) {
-  const itemsPerColumn = Math.ceil(tools.length / 3)
-
-  // Split into 3 columns with dynamic number of items
-  const columns = [
-    tools.slice(0, itemsPerColumn),
-    tools.slice(itemsPerColumn, itemsPerColumn * 2),
-    tools.slice(itemsPerColumn * 2),
-  ]
+  const columns = splitIntoColumns(tools, 3)
 
   return (
     <div className="w-full">

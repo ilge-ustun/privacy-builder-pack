@@ -3,8 +3,9 @@ import Collapse from "@/components/Collapse"
 import { useGithubMarkdownFiles } from "@/hooks/useGithubMarkdownFiles"
 import { MarkdownFile } from "@/types/markdownFile"
 import Skeleton from "@/components/Skeleton"
-import Image from "next/image"
-import MarkdownRenderer from "./MarkdownRenderer"
+import MarkdownRenderer from "@/components/MarkdownRenderer"
+import ExternalLink from "@/components/ExternalLink"
+import splitIntoColumns from "@/utils/splitIntoColumns"
 
 function getName(content: string) {
   const firstLine = content.split("\n")[0]
@@ -18,15 +19,7 @@ function getContent(content: string) {
 
 function TipsContentInner({ tipFiles }: { tipFiles: Promise<MarkdownFile[]> }) {
   const files = [...use(tipFiles), { name: "contribute.md", content: "" }]
-
-  const itemsPerColumn = Math.ceil(files.length / 3)
-
-  // Split into 3 columns with dynamic number of items
-  const columns = [
-    files.slice(0, itemsPerColumn),
-    files.slice(itemsPerColumn, itemsPerColumn * 2),
-    files.slice(itemsPerColumn * 2),
-  ]
+  const columns = splitIntoColumns(files, 3)
 
   return (
     <div className="w-full">
@@ -36,23 +29,11 @@ function TipsContentInner({ tipFiles }: { tipFiles: Promise<MarkdownFile[]> }) {
             {column.map((file: MarkdownFile) => {
               if (file.name === "contribute.md") {
                 return (
-                  <a
+                  <ExternalLink
                     key={file.name}
                     href="https://github.com/web3privacy/privacy-builder-pack/blob/main/tips/contribute.md"
-                    target="_blank"
-                    className={
-                      "w-full flex items-center justify-between h-[70px] border rounded-md border-green overflow-hidden p-5 hover-shine hover:cursor-pointer font-bold"
-                    }
-                  >
-                    Contribute{" "}
-                    <Image
-                      src="/icons/chevron.svg"
-                      alt="Toggle"
-                      width={15}
-                      height={15}
-                      className="rotate-270"
-                    />
-                  </a>
+                    text="Contribute"
+                  />
                 )
               } else {
                 return (
