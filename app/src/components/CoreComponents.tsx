@@ -17,7 +17,13 @@ export default function CoreComponents() {
         onTouchStart={() => setIsHovered(true)}
         onTouchEnd={() => setIsHovered(false)}
       >
-        <Image src="/icons/locker.svg" alt="Core Components" width={28} height={28} />
+        <Image
+          src="/icons/locker.svg"
+          alt="Core Components"
+          width={28}
+          height={28}
+          className="w-auto h-auto"
+        />
         <h1 className="text-white text-2xl font-bold">
           {isHovered || isSmallScreen ? "Core Components" : "©¢w§¶Ï"}
         </h1>

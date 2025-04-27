@@ -4,7 +4,7 @@ import Image from "next/image"
 
 interface SelectTagsProps {
   // onChange?: (selected: string[]) => void
-  onChange?: (selected: string) => void
+  onChange: (selected: string) => void
 }
 
 const placeholder = "All categories"

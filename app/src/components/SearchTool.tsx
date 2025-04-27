@@ -17,6 +17,10 @@ export default function SearchTool({ onSearch }: SearchToolProps) {
     }
   }
 
+  const handleChangeTags = (selected: string) => {
+    console.log(selected)
+  }
+
   return (
     <div className="flex flex-col sm:flex-row gap-2 w-full my-6">
       <div className="flex items-center thin-border text-white w-full p-4 grow">
@@ -29,7 +33,7 @@ export default function SearchTool({ onSearch }: SearchToolProps) {
           placeholder="Search tools..."
         />
       </div>
-      <MultiSelectTags />
+      <MultiSelectTags onChange={handleChangeTags} />
     </div>
   )
 }

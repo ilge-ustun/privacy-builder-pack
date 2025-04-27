@@ -59,7 +59,7 @@ export default function Navbar() {
               target={item.external ? "_blank" : "_self"}
             >
               <div className="w-5 h-5 relative">
-                <Image src={item.icon} alt={item.shortTitle} fill />
+                <Image src={item.icon} alt={item.shortTitle} fill className="w-auto h-auto" />
               </div>
               <span className="text-white">{item.shortTitle}</span>
             </Link>
@@ -85,7 +85,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               <div className="w-5 h-5 relative ">
-                <Image src={item.icon} alt={item.title} fill />
+                <Image src={item.icon} alt={item.title} fill className="w-auto h-auto" />
               </div>
               <span className="text-white">{item.title}</span>
             </Link>

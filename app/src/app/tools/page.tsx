@@ -6,7 +6,9 @@ import tools1 from "@/data/tools.json"
 import tools2 from "@/data/privacyFocusedTools.json"
 import SearchTool from "@/components/SearchTool"
 import { useState } from "react"
+
 const tools = [...tools1, ...tools2]
+
 export default function Tools() {
   const [searchQuery, setSearchQuery] = useState("")
 

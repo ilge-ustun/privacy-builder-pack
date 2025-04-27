@@ -24,7 +24,13 @@ export default function Home() {
             onClick={() => {}}
             disabled={false}
           >
-            <Image src="/icons/cursor.svg" alt="Documentation" width={20} height={20} />{" "}
+            <Image
+              src="/icons/cursor.svg"
+              alt="Documentation"
+              width={20}
+              height={20}
+              className="w-auto h-auto"
+            />{" "}
             Documentation
           </button>
         </div>

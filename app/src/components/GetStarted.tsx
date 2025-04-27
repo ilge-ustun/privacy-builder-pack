@@ -9,7 +9,13 @@ export default function GetStarted() {
     >
       <div className="w-full flex space-x-2 items-center mb-4">
         <div className="relative w-5 h-5">
-          <Image src="/icons/on.png" alt="Get started" fill />
+          <Image
+            src="/icons/on.png"
+            alt="Get started"
+            fill
+            sizes="20px, 20px"
+            className="w-auto h-auto"
+          />
         </div>
         <h2 className="text-white text-xl">Get Started_</h2>
       </div>

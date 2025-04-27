@@ -27,7 +27,7 @@ export default function CoreComponentCard({ component }: { component: CoreCompon
         alt={component.title}
         width={24}
         height={24}
-        className="opacity-80 group-hover:opacity-100 transition-opacity"
+        className="opacity-80 group-hover:opacity-100 transition-opacity w-auto h-auto"
       />
       <h3 className="text-white text-lg font-medium">
         {isHovered || isSmallScreen ? component.title : glitchedTitle}
