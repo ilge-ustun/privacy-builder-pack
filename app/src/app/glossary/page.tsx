@@ -2,6 +2,7 @@
 import Image from "next/image"
 import GlossaryContent from "@/components/GlossaryContent"
 import { Suspense } from "react"
+import GlossarySuggestions from "@/components/GlossarySuggestions"
 
 export default function Glossary() {
   return (
@@ -22,6 +23,8 @@ export default function Glossary() {
         <Suspense>
           <GlossaryContent />
         </Suspense>
+
+        <GlossarySuggestions />
       </div>
     </main>
   )
