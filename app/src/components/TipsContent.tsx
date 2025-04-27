@@ -23,7 +23,7 @@ function TipsContentInner({ tipFiles }: { tipFiles: Promise<MarkdownFile[]> }) {
 
   return (
     <div className="w-full">
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-4">
         {columns.map((column, columnIndex) => (
           <div key={columnIndex} className="w-full md:w-1/3 flex flex-col gap-4">
             {column.map((file: MarkdownFile) => {
