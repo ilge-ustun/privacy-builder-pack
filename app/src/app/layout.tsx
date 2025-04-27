@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Azeret_Mono } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 const azeretMono = Azeret_Mono({
   variable: "--font-azeret-mono",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${azeretMono.variable} ${azeretMono.variable} antialiased w-full`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
