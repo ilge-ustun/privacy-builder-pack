@@ -4,21 +4,28 @@ import Image from "next/image"
 import MultiSelectTags from "@/components/SelectTags"
 
 interface SearchToolProps {
-  onSearch?: (query: string) => void
+  onSearch: (query: string, tags: string[]) => void
 }
 
 export default function SearchTool({ onSearch }: SearchToolProps) {
   const [query, setQuery] = useState("")
+  const [tags, setTags] = useState<string[]>([])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value)
     if (onSearch) {
-      onSearch(e.target.value)
+      onSearch(e.target.value, tags)
     }
   }
 
   const handleChangeTags = (selected: string) => {
-    console.log(selected)
+    if (selected === "All categories") {
+      setTags([])
+      onSearch(query, [])
+    } else {
+      setTags([selected])
+      onSearch(query, [selected])
+    }
   }
 
   return (

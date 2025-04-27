@@ -6,17 +6,63 @@ import tools1 from "@/data/tools.json"
 import tools2 from "@/data/privacyFocusedTools.json"
 import SearchTool from "@/components/SearchTool"
 import { useState } from "react"
+import { Category } from "@/types/tools"
 
 const tools = [...tools1, ...tools2]
 
-export default function Tools() {
-  const [searchQuery, setSearchQuery] = useState("")
+interface SearchQuery {
+  query: string
+  tags: string[]
+}
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query)
+function filterTools(tools: Category[], searchQuery: SearchQuery) {
+  if (searchQuery.tags.length === 0 && searchQuery.query.trim() === "") {
+    return tools
   }
 
-  console.log(searchQuery)
+  return tools
+    .map((tool) => {
+      // Check if tool's category or description matches text query
+      const matchesText =
+        searchQuery.query.trim() === "" ||
+        tool.category.toLowerCase().includes(searchQuery.query.toLowerCase()) ||
+        tool.description.toLowerCase().includes(searchQuery.query.toLowerCase())
+
+      // If tool matches text query, return full tool
+      if (matchesText && searchQuery.tags.length === 0) {
+        return tool
+      }
+
+      // Otherwise, filter items by both tags and text
+      const filteredItems = tool.items.filter((item) => {
+        const matchesTags =
+          searchQuery.tags.length === 0 || searchQuery.tags.every((tag) => item.tags.includes(tag))
+
+        const matchesItemText =
+          searchQuery.query === "" ||
+          item.name.toLowerCase().includes(searchQuery.query.toLowerCase()) ||
+          item.description.toLowerCase().includes(searchQuery.query.toLowerCase())
+
+        return matchesTags && matchesItemText
+      })
+
+      // Only return tool if it has matching items
+      return filteredItems.length > 0 ? { ...tool, items: filteredItems } : null
+    })
+    .filter(Boolean) as Category[]
+}
+
+export default function Tools() {
+  const [searchQuery, setSearchQuery] = useState<SearchQuery>({
+    query: "",
+    tags: [],
+  })
+
+  const filteredTools = filterTools(tools, searchQuery)
+
+  const handleSearch = (query: string, tags: string[]) => {
+    setSearchQuery({ query, tags })
+  }
 
   return (
     <main className="relative min-h-screen bg-[#030303] pt-20 flex flex-col items-center">
@@ -49,7 +95,7 @@ export default function Tools() {
 
         <SearchTool onSearch={handleSearch} />
 
-        <ToolsCategories toolsCategories={tools} />
+        <ToolsCategories toolsCategories={filteredTools} />
       </div>
     </main>
   )
