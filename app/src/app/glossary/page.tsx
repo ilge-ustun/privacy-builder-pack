@@ -2,6 +2,7 @@
 import Image from "next/image"
 import GlossaryContent from "@/components/GlossaryContent"
 import { Suspense } from "react"
+
 export default function Glossary() {
   return (
     <main className="relative min-h-screen bg-[url('/bg2.webp')] bg-fixed bg-cover bg-center bg-no-repeat pt-20 flex flex-col items-center">
