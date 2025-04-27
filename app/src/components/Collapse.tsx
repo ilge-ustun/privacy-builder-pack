@@ -21,8 +21,9 @@ export default function Collapse({
   return (
     <div
       className={`w-full thin-border overflow-hidden p-5 hover:border-white ${
-        isOpen ? "" : "hover-shine"
+        isOpen ? "" : "hover-shine hover:cursor-pointer"
       }`}
+      onClick={() => setIsOpen(!isOpen)}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
