@@ -30,7 +30,7 @@ export default function Collapse({
         className="w-full flex items-baseline justify-between transition-colors hover:cursor-pointer"
       >
         <div className="flex flex-col items-start">
-          <h3 className="text-lg font-bold text-white text-left">{title}</h3>
+          <h3 className="text-lg font-bold text-white text-left capitalize">{title}</h3>
           {subtitle && <p className="text-sm text-white mt-1 text-left">{subtitle}</p>}
         </div>
         <Image
@@ -38,7 +38,9 @@ export default function Collapse({
           alt="Toggle"
           width={15}
           height={15}
-          className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          className={`w-auto h-auto transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
         />
       </button>
       <div

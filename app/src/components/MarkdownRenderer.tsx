@@ -9,7 +9,9 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
     <div className="prose prose-invert max-w-none">
       <ReactMarkdown
         components={{
-          h1: ({ ...props }) => <h1 className="text-3xl font-bold mt-8 mb-4" {...props} />,
+          h1: ({ ...props }) => (
+            <h1 className="text-xl font-bold mt-8 mb-4 text-green" {...props} />
+          ),
           p: ({ ...props }) => <p className="mb-6" {...props} />,
           strong: ({ ...props }) => <strong className="font-bold text-white" {...props} />,
           em: ({ ...props }) => <em className="italic text-gray-400" {...props} />,
