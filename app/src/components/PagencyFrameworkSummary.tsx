@@ -78,7 +78,7 @@ export default function PagencyFrameworkSummary() {
           border: "1px solid white",
           borderRadius: "0.375rem",
           width: "100%",
-          padding: "1.25rem 0.75rem",
+          padding: "1.25rem 1rem",
           color: "white",
           userSelect: "none",
           backgroundColor: "#000000",
@@ -231,6 +231,17 @@ export default function PagencyFrameworkSummary() {
               </div>
             )
           })}
+        </div>
+
+        <div className="flex flex-row flex-wrap justify-between border-t border-white/20 mt-8 pt-6 pb-8 px-4 gap-4">
+          <p>PAGENCY Framework - Privacy-Enhancing Applications Development Framework</p>
+          <p>
+            {new Date().toLocaleDateString("en-CA", {
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+            })}
+          </p>
         </div>
       </div>
     </div>
