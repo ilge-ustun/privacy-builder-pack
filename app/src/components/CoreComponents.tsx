@@ -16,7 +16,7 @@ export default function CoreComponents() {
 
   const getBackgroundSize = useCallback(() => {
     if (windowWidth < 768) {
-      return "400px"
+      return "370px"
     } else if (windowWidth < 960) {
       return "500px"
     } else if (windowWidth < 1024) {
@@ -29,7 +29,7 @@ export default function CoreComponents() {
   const getBackgroundPosition = useCallback(() => {
     if (stablePosition) {
       if (windowWidth < 768) {
-        return `right -30px top ${stablePosition - 180}px`
+        return `right -30px top ${stablePosition - 160}px`
       } else if (windowWidth < 960) {
         return `right 0px top ${stablePosition - 200}px`
       } else if (windowWidth < 1024) {
