@@ -21,13 +21,13 @@ export default function Collapse({
   return (
     <div
       className={`w-full thin-border overflow-hidden p-5 hover:border-white ${
-        isOpen ? "" : "hover-shine hover:cursor-pointer"
+        isOpen ? "" : "hover-shine cursor-pointer"
       }`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-baseline justify-between transition-colors hover:cursor-pointer"
+        className="w-full flex items-baseline justify-between transition-colors cursor-pointer"
       >
         <div className="flex flex-col items-start">
           <h3 className="text-lg font-bold text-white text-left capitalize">{title}</h3>

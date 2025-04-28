@@ -1,8 +1,5 @@
 "use client"
-import Link from "next/link"
-import Image from "next/image"
 import { useState } from "react"
-import { usePathname } from "next/navigation"
 import navbarItems from "@/data/coreComponents.json"
 import NavbarLink from "@/components/NavbarLink"
 
@@ -17,10 +14,9 @@ const homeItem = {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
 
   return (
-    <nav className="w-fullabsolute top-0 left-0 right-0 p-0 text-white z-50">
+    <nav className="w-full absolute top-0 left-0 right-0 p-0 text-white z-50">
       <div className="w-full p-4 relative z-100 flex md:gap-4 items-center justify-between md:justify-center mx-auto">
         {/* Desktop menu */}
         <div className="hidden w-full md:flex md:flex-wrap items-center justify-center gap-4">
@@ -32,19 +28,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-4">
             {navbarItems.slice(Math.ceil(navbarItems.length / 2)).map((item, index) => (
-              <Link
-                key={index}
-                href={item.link}
-                className={`flex items-center space-x-2 ${
-                  pathname === item.link ? "opacity-100" : "opacity-70 hover:opacity-100"
-                }`}
-                target={item.external ? "_blank" : "_self"}
-              >
-                <div className="w-5 h-5 relative">
-                  <Image src={item.icon} alt={item.shortTitle} fill className="w-auto h-auto" />
-                </div>
-                <span className="text-white">{item.shortTitle}</span>
-              </Link>
+              <NavbarLink key={index} item={item} onClick={() => setIsMenuOpen(false)} />
             ))}
           </div>
         </div>

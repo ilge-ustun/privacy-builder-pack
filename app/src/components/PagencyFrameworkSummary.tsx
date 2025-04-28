@@ -74,7 +74,7 @@ export default function PagencyFrameworkSummary() {
       <button
         onClick={handleDownload}
         disabled={isGenerating}
-        className={`bg-green-500 text-black px-5 py-2.5 rounded-md self-center hover-shine hover:cursor-pointer cursor-${
+        className={`bg-green-500 text-black px-5 py-2.5 rounded-md self-center hover-shine cursor-pointer cursor-${
           isGenerating ? "default" : "pointer"
         } opacity-${isGenerating ? "50" : "100"} text-sm`}
       >

@@ -14,7 +14,7 @@ export default function NavbarLink({
   return (
     <Link
       href={item.link}
-      className={`flex items-center space-x-2 whitespace-nowrap ${
+      className={`flex items-center space-x-2 whitespace-nowrap transition-transform duration-200 cursor-pointer hover:scale-105 ${
         pathname === item.link ? "opacity-100" : "opacity-70 hover:opacity-100"
       }`}
       onClick={onClick}
