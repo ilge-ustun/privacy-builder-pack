@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation"
 import PagencyFrameworkSummary from "@/components/PagencyFrameworkSummary"
 import PagencyFrameworkExamples from "@/components/PagencyFrameworkExamples"
 import TerminalCursor from "@/components/TerminalCursor"
+
 function FrameworkContent() {
   const searchParams = useSearchParams()
   const itemId = parseInt(searchParams.get("item") ?? "1")
