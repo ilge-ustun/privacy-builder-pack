@@ -29,13 +29,13 @@ export default function CoreComponents() {
   const getBackgroundPosition = useCallback(() => {
     if (stablePosition) {
       if (windowWidth < 768) {
-        return `right -30px top ${stablePosition - 160}px`
+        return `right -30px top ${stablePosition - 130}px`
       } else if (windowWidth < 960) {
         return `right 0px top ${stablePosition - 200}px`
       } else if (windowWidth < 1024) {
         return `right 0px top ${stablePosition - 230}px`
       } else {
-        return `right 0px top ${stablePosition - 380}px`
+        return `right 0px top ${stablePosition - 350}px`
       }
     }
     return ""
