@@ -6,6 +6,7 @@ import Skeleton from "@/components/Skeleton"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import ExternalLink from "@/components/ExternalLink"
 import { addToTheEnd, splitIntoColumns } from "@/utils/splitIntoColumns"
+import { useScreenSize } from "@/hooks/useScreenSize"
 
 function getName(content: string) {
   const firstLine = content.split("\n")[0]
@@ -19,11 +20,20 @@ function getContent(content: string) {
 
 function TipsContentInner({ tipFiles }: { tipFiles: Promise<MarkdownFile[]> }) {
   const files = use(tipFiles)
+  const isSmallScreen = useScreenSize()
 
-  const columns = addToTheEnd(splitIntoColumns(files, 3), {
-    name: "contribute.md",
-    content: "",
-  })
+  const columns = isSmallScreen
+    ? splitIntoColumns([
+        ...files,
+        {
+          name: "contribute.md",
+          content: "",
+        },
+      ])
+    : addToTheEnd(splitIntoColumns(files, 3), {
+        name: "contribute.md",
+        content: "",
+      })
 
   return (
     <div className="w-full">

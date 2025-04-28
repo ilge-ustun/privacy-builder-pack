@@ -3,6 +3,7 @@ import { FrameworkExample } from "@/types/frameworkExamples"
 import { addToTheEnd, splitIntoColumns } from "@/utils/splitIntoColumns"
 import ExternalLink from "@/components/ExternalLink"
 import { getRawGitHubUrl } from "@/utils/getRawGitHubUrl"
+import { useScreenSize } from "@/hooks/useScreenSize"
 
 const contribute = {
   title: "Contribute",
@@ -11,7 +12,11 @@ const contribute = {
 }
 
 export default function FrameworkExamples() {
-  const columns = addToTheEnd(splitIntoColumns(frameworkExamples), contribute, 3)
+  const isSmallScreen = useScreenSize()
+
+  const columns = isSmallScreen
+    ? splitIntoColumns([...frameworkExamples, contribute])
+    : addToTheEnd(splitIntoColumns(frameworkExamples), contribute, 3)
 
   return (
     <div className="w-full mt-32 border-t border-white/20 pt-24 px-0 md:px-24">

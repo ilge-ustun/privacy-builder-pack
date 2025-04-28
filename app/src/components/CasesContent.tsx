@@ -6,6 +6,7 @@ import Skeleton from "@/components/Skeleton"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import ExternalLink from "@/components/ExternalLink"
 import { addToTheEnd, splitIntoColumns } from "@/utils/splitIntoColumns"
+import { useScreenSize } from "@/hooks/useScreenSize"
 
 function getName(name: string) {
   return name.replace(".md", "").replace(/-/g, " ")
@@ -14,10 +15,20 @@ function getName(name: string) {
 function CasesContentInner({ caseFiles }: { caseFiles: Promise<MarkdownFile[]> }) {
   const files = use(caseFiles)
 
-  const columns = addToTheEnd(splitIntoColumns(files, 3), {
-    name: "contribute.md",
-    content: "",
-  })
+  const isSmallScreen = useScreenSize()
+
+  const columns = isSmallScreen
+    ? splitIntoColumns([
+        ...files,
+        {
+          name: "contribute.md",
+          content: "",
+        },
+      ])
+    : addToTheEnd(splitIntoColumns(files, 3), {
+        name: "contribute.md",
+        content: "",
+      })
 
   return (
     <div className="w-full">
