@@ -43,3 +43,7 @@ body {
 .thin-border {
   @apply border border-white/20 rounded-md;
 }
+
+.border-green {
+  @apply border border-green rounded-md;
+}
