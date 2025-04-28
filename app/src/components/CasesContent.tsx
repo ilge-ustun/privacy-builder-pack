@@ -5,16 +5,19 @@ import { MarkdownFile } from "@/types/markdownFile"
 import Skeleton from "@/components/Skeleton"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import ExternalLink from "@/components/ExternalLink"
-import splitIntoColumns from "@/utils/splitIntoColumns"
+import { addToTheEnd, splitIntoColumns } from "@/utils/splitIntoColumns"
 
 function getName(name: string) {
   return name.replace(".md", "").replace(/-/g, " ")
 }
 
 function CasesContentInner({ caseFiles }: { caseFiles: Promise<MarkdownFile[]> }) {
-  const files = [...use(caseFiles), { name: "contribute.md", content: "" }]
+  const files = use(caseFiles)
 
-  const columns = splitIntoColumns(files, 3)
+  const columns = addToTheEnd(splitIntoColumns(files, 3), {
+    name: "contribute.md",
+    content: "",
+  })
 
   return (
     <div className="w-full">

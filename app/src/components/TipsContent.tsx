@@ -5,7 +5,7 @@ import { MarkdownFile } from "@/types/markdownFile"
 import Skeleton from "@/components/Skeleton"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import ExternalLink from "@/components/ExternalLink"
-import splitIntoColumns from "@/utils/splitIntoColumns"
+import { addToTheEnd, splitIntoColumns } from "@/utils/splitIntoColumns"
 
 function getName(content: string) {
   const firstLine = content.split("\n")[0]
@@ -18,8 +18,12 @@ function getContent(content: string) {
 }
 
 function TipsContentInner({ tipFiles }: { tipFiles: Promise<MarkdownFile[]> }) {
-  const files = [...use(tipFiles), { name: "contribute.md", content: "" }]
-  const columns = splitIntoColumns(files, 3)
+  const files = use(tipFiles)
+
+  const columns = addToTheEnd(splitIntoColumns(files, 3), {
+    name: "contribute.md",
+    content: "",
+  })
 
   return (
     <div className="w-full">

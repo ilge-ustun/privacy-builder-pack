@@ -1,4 +1,4 @@
-function splitIntoColumns<T>(array: T[], columnsNumber: number = 3): T[][] {
+export function splitIntoColumns<T>(array: T[], columnsNumber: number = 3): T[][] {
   const columns: T[][] = Array.from({ length: columnsNumber }, () => [])
 
   // Calculate base items per column and remaining items
@@ -17,4 +17,25 @@ function splitIntoColumns<T>(array: T[], columnsNumber: number = 3): T[][] {
   return columns
 }
 
-export default splitIntoColumns
+export function addToTheEnd<T>(columns: T[][], item: T, targetColumns: number = 3): T[][] {
+  // If we have less than target columns, add a new column
+  if (columns.length < targetColumns) {
+    return [...columns, [item]]
+  }
+
+  // Find the column with the minimum length
+  let minLength = Infinity
+  let targetColumnIndex = 0
+
+  for (let i = 0; i < columns.length; i++) {
+    if (columns[i].length < minLength) {
+      minLength = columns[i].length
+      targetColumnIndex = i
+    }
+  }
+
+  // Create a new array to avoid mutating the original
+  const newColumns = columns.map((col, i) => (i === targetColumnIndex ? [...col, item] : [...col]))
+
+  return newColumns
+}

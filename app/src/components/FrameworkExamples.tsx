@@ -1,6 +1,6 @@
 import frameworkExamples from "@/data/frameworkExamples.json"
 import { FrameworkExample } from "@/types/frameworkExamples"
-import splitIntoColumns from "@/utils/splitIntoColumns"
+import { splitIntoColumns } from "@/utils/splitIntoColumns"
 import ExternalLink from "./ExternalLink"
 
 const contribute = {

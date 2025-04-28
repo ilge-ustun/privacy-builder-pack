@@ -1,6 +1,6 @@
 import { Tool } from "@/types/tools"
 import ToolCard from "@/components/ToolCard"
-import splitIntoColumns from "@/utils/splitIntoColumns"
+import { splitIntoColumns } from "@/utils/splitIntoColumns"
 
 export default function ToolsGrid({ tools }: { tools: Tool[] }) {
   const columns = splitIntoColumns(tools, 3)

@@ -1,6 +1,6 @@
 import glossarySuggestions from "@/data/glossarySuggestions.json"
 import { GlossarySuggestion } from "@/types/glossarySuggestions"
-import splitIntoColumns from "@/utils/splitIntoColumns"
+import { splitIntoColumns } from "@/utils/splitIntoColumns"
 import Image from "next/image"
 export default function GlossarySuggestions() {
   const columns = splitIntoColumns(glossarySuggestions, 3)

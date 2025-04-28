@@ -1,7 +1,7 @@
 import ExternalLink from "@/components/ExternalLink"
 import tailOsUserGuides from "@/data/tailOsUserGuides.json"
 import { TailOsUserGuide } from "@/types/tailOsUserGuides"
-import splitIntoColumns from "@/utils/splitIntoColumns"
+import { splitIntoColumns } from "@/utils/splitIntoColumns"
 
 export default function TailOsUserGuides() {
   const columns = splitIntoColumns(tailOsUserGuides)
