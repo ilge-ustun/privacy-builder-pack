@@ -92,7 +92,11 @@ export default function Tools() {
             </div>
             <div className="flex flex-row mr-8">
               <span className="mr-2">→</span>{" "}
-              <ExternalLink href="" color="green" text="Contribute" />
+              <ExternalLink
+                href="https://github.com/web3privacy/privacy-builder-pack/blob/main/tools/contribute.md"
+                color="green"
+                text="Contribute"
+              />
             </div>
           </div>
         </div>
