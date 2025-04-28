@@ -1,5 +1,13 @@
 [
   {
+    "title": "Glossary",
+    "shortTitle": "Glossary",
+    "description": "Comprehensive guide to privacy and security terminology.",
+    "link": "/glossary",
+    "external": false,
+    "icon": "/icons/glossary.svg"
+  },
+  {
     "title": "Tools",
     "shortTitle": "Tools",
     "description": "Essential resources for privacy-focused development.",
@@ -62,13 +70,5 @@
     "link": "/tails-os",
     "external": false,
     "icon": "/icons/tailsos.svg"
-  },
-  {
-    "title": "Glossary",
-    "shortTitle": "Glossary",
-    "description": "Comprehensive guide to privacy and security terminology.",
-    "link": "/glossary",
-    "external": false,
-    "icon": "/icons/glossary.svg"
   }
 ]
