@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image"
 import CasesContent from "@/components/CasesContent"
+import TerminalCursor from "@/components/TerminalCursor"
 
 export default function Cases() {
   return (
@@ -14,7 +15,10 @@ export default function Cases() {
             height={28}
             className="w-auto h-auto"
           />
-          <h1 className="text-white text-2xl">Local-First Privacy Cases_</h1>
+          <h1 className="text-white text-2xl">
+            Local-First Privacy Cases
+            <TerminalCursor />
+          </h1>
         </div>
         <p>
           Real, local stories to inspire you to build impactful privacy solutions for the

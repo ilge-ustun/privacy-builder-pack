@@ -2,6 +2,7 @@ import Collapse from "@/components/Collapse"
 import ExternalLink from "@/components/InlineExternalLink"
 import Image from "next/image"
 import TailOsUserGuides from "@/components/TailOsUserGuides"
+import TerminalCursor from "@/components/TerminalCursor"
 
 export default function TailsOS() {
   return (
@@ -9,7 +10,10 @@ export default function TailsOS() {
       <div className="relative flex flex-col gap-8 items-center sm:items-start p-6 px-4 sm:px-6 pb-20 sm:p-20 container">
         <div className="w-full flex gap-2 space-x-2">
           <Image src="/icons/tailsos.svg" alt="tailsOS" width={28} height={28} />
-          <h1 className="text-white text-2xl">Tails OS_</h1>
+          <h1 className="text-white text-2xl">
+            Tails OS
+            <TerminalCursor />
+          </h1>
         </div>
         <p>A portable operating system that protects against surveillance and censorship.</p>
 

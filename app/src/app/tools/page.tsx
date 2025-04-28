@@ -7,6 +7,7 @@ import tools2 from "@/data/privacyFocusedTools.json"
 import SearchTool from "@/components/SearchTool"
 import { useState } from "react"
 import { Category } from "@/types/tools"
+import TerminalCursor from "@/components/TerminalCursor"
 
 const tools = [...tools1, ...tools2]
 
@@ -69,7 +70,10 @@ export default function Tools() {
       <div className="relative flex flex-col gap-8 items-center sm:items-start p-6 px-4 sm:px-6 pb-20 sm:p-20 container">
         <div className="w-full flex gap-2 space-x-2">
           <Image src="/icons/tools.svg" alt="Tools" width={28} height={28} />
-          <h1 className="text-white text-2xl">Web3 & Privacy Tools_</h1>
+          <h1 className="text-white text-2xl">
+            Web3 & Privacy Tools
+            <TerminalCursor />
+          </h1>
         </div>
         <div>
           <p className="mb-2">A curated collection of tools and resources.</p>

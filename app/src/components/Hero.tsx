@@ -1,8 +1,9 @@
 import { useScreenSize } from "@/hooks/useScreenSize"
 import { useState } from "react"
 import { useDecryptAnimation } from "@/hooks/useDecryptAnimation"
+import TerminalCursor from "@/components/TerminalCursor"
 
-const title = "Privacy Builder Pack_"
+const title = "Privacy Builder Pack"
 const subtitle = "Your toolkit for digital sovereignty in the surveillance age"
 
 const glitchedTitle = ">¸¯íº)]z³ٲO"
@@ -23,6 +24,7 @@ export default function Hero() {
     >
       <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold mb-4">
         {isSmallScreen ? title : displayTitle}
+        <TerminalCursor />
       </h1>
       <p className="text-lg xl:text-xl">{isSmallScreen ? subtitle : displaySubtitle}</p>
     </div>

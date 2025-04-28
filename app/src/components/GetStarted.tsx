@@ -1,5 +1,6 @@
 import Image from "next/image"
 import ExternalLink from "./InlineExternalLink"
+import TerminalCursor from "./TerminalCursor"
 
 export default function GetStarted() {
   return (
@@ -17,7 +18,10 @@ export default function GetStarted() {
             className="w-auto h-auto"
           />
         </div>
-        <h2 className="text-white text-xl">Get Started_</h2>
+        <h2 className="text-white text-xl">
+          Get Started
+          <TerminalCursor />
+        </h2>
       </div>
       <p>Let´s revive the crypto core values and build meaningful applications!</p>
 

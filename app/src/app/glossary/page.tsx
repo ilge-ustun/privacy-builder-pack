@@ -3,6 +3,7 @@ import Image from "next/image"
 import GlossaryContent from "@/components/GlossaryContent"
 import { Suspense } from "react"
 import GlossarySuggestions from "@/components/GlossarySuggestions"
+import TerminalCursor from "@/components/TerminalCursor"
 
 export default function Glossary() {
   return (
@@ -16,7 +17,10 @@ export default function Glossary() {
             height={28}
             className="w-auto h-auto"
           />
-          <h1 className="text-white text-2xl">Glossary_</h1>
+          <h1 className="text-white text-2xl">
+            Glossary
+            <TerminalCursor />
+          </h1>
         </div>
         <p>Master the essential terminology of privacy and security in the digital age.</p>
 
