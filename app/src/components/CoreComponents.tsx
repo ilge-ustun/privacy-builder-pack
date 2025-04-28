@@ -35,7 +35,7 @@ export default function CoreComponents() {
       } else if (windowWidth < 1024) {
         return `right 0px top ${stablePosition - 230}px`
       } else {
-        return `right 0px top ${stablePosition - 430}px`
+        return `right 0px top ${stablePosition - 380}px`
       }
     }
     return ""
