@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
 import navbarItems from "@/data/coreComponents.json"
-import NavbarLink from "./NavbarLink"
+import NavbarLink from "@/components/NavbarLink"
 
 const homeItem = {
   title: "Privacy Builder Pack",
