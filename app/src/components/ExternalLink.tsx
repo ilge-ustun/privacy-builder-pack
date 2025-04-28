@@ -16,7 +16,7 @@ export default function ExternalLink({
       href={href}
       target="_blank"
       className={`w-full flex items-center justify-between h-[70px] border rounded-md border-${
-        highlight ? "green" : "white/20"
+        highlight === true ? "green" : "white/20"
       } overflow-hidden p-5 hover-shine cursor-pointer font-bold`}
     >
       <div className="flex items-center gap-2">
