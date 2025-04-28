@@ -13,7 +13,7 @@ export default function Hero() {
   const isSmallScreen = useScreenSize()
 
   const displayTitle = useDecryptAnimation(title, glitchedTitle, isHovered)
-  const displaySubtitle = useDecryptAnimation(subtitle, glitchedSubtitle, isHovered, 1)
+  const displaySubtitle = useDecryptAnimation(subtitle, glitchedSubtitle, isHovered, 20)
 
   return (
     <div
