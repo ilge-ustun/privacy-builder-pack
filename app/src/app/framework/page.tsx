@@ -10,17 +10,27 @@ function FrameworkContent() {
   const itemId = parseInt(searchParams.get("item") ?? "1")
 
   return (
-    <div className="relative flex flex-col gap-8 items-center sm:items-start p-5 px-3 sm:px-5 pb-20 sm:p-20 container">
-      <div className="w-full flex gap-2 space-x-2">
-        <Image src="/icons/framework.svg" alt="Pagency Framework" width={28} height={28} />
-        <h1 className="text-white text-2xl">Pagency Framework_</h1>
+    <>
+      <div className="relative flex flex-col gap-8 items-center sm:items-start p-5 px-3 sm:px-5 pb-20 sm:p-20 container">
+        <div className="w-full flex gap-2 space-x-2">
+          <Image src="/icons/framework.svg" alt="Pagency Framework" width={28} height={28} />
+          <h1 className="text-white text-2xl">Pagency Framework_</h1>
+        </div>
+        <div>
+          A structured approach to building privacy-enhancing applications that make a real impact.
+        </div>
       </div>
-      <div>
-        A structured approach to building privacy-enhancing applications that make a real impact.
+      {itemId === 0 ? (
+        <PagencyFrameworkSummary />
+      ) : (
+        <div className="relative flex flex-col gap-8 items-center sm:items-start p-5 px-3 sm:px-5 pb-20 sm:p-20 container">
+          <PagencyFrameworkForm itemId={itemId} />
+        </div>
+      )}
+      <div className="relative flex flex-col gap-8 items-center sm:items-start p-5 px-3 sm:px-5 pb-20 sm:p-20 container">
+        <FrameworkExamples />
       </div>
-      {itemId === 0 ? <PagencyFrameworkSummary /> : <PagencyFrameworkForm itemId={itemId} />}
-      <FrameworkExamples />
-    </div>
+    </>
   )
 }
 

@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { getAllFormData } from "@/utils/indexedDB"
 import frameworkItems from "@/data/pagencyFramework.json"
 import { FrameworkItem } from "@/types/framework"
-import domtoimage from "dom-to-image-more"
+import { toPng } from "html-to-image"
 
 export default function PagencyFrameworkSummary() {
   const [allData, setAllData] = useState<Array<{ itemId: number; data: Record<string, string> }>>(
@@ -15,10 +15,10 @@ export default function PagencyFrameworkSummary() {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth <= 640) {
         setColumnCount(1)
-        // } else if (window.innerWidth <= 1280) {
-        //   setColumnCount(2)
+      } else if (window.innerWidth <= 1024) {
+        setColumnCount(2)
       } else {
         setColumnCount(3)
       }
@@ -41,38 +41,26 @@ export default function PagencyFrameworkSummary() {
     }
     loadAllData()
   }, [])
-
-  const handleDownload = async () => {
+  const onButtonClick = useCallback(() => {
     if (!contentRef.current || isGenerating) return
     setIsGenerating(true)
 
-    try {
-      const dataUrl = await domtoimage.toPng(contentRef.current, {
-        scale: 2, // or 3 for even sharper
-        style: {
-          transform: "scale(1)", // ensure normal size visually
-          transformOrigin: "top left",
-        },
+    toPng(contentRef.current, { cacheBust: true })
+      .then((dataUrl) => {
+        const link = document.createElement("a")
+        link.download = "PagencyFrameworkSummary.png"
+        link.href = dataUrl
+        link.click()
       })
-
-      // Create a fake link and trigger download
-      const link = document.createElement("a")
-      link.href = dataUrl
-      link.download = "pagency-framework-summary.png"
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-    } catch (error) {
-      console.error("Error generating PNG:", error)
-    } finally {
-      setIsGenerating(false)
-    }
-  }
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [contentRef, isGenerating])
 
   return (
-    <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "2rem" }}>
+    <div className="w-full flex flex-col gap-8 px-4">
       <button
-        onClick={handleDownload}
+        onClick={onButtonClick}
         disabled={isGenerating}
         className={`bg-green-500 text-black px-5 py-2.5 rounded-md self-center hover-shine cursor-pointer cursor-${
           isGenerating ? "default" : "pointer"
