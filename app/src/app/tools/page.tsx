@@ -1,5 +1,5 @@
 "use client"
-import ExternalLink from "@/components/InlineExternalLink"
+import InlineExternalLink from "@/components/InlineExternalLink"
 import Image from "next/image"
 import ToolsCategories from "@/components/ToolsCategories"
 import tools1 from "@/data/tools.json"
@@ -80,19 +80,19 @@ export default function Tools() {
           <div className="flex flex-row flex-wrap">
             <div className="flex flex-row mr-8">
               <span className="mr-2">→</span>{" "}
-              <ExternalLink href="https://haveibeenpwned.com" text="pwned?" />
+              <InlineExternalLink href="https://haveibeenpwned.com" text="pwned?" />
             </div>
             <div className="flex flex-row mr-8">
               <span className="mr-2">→</span>{" "}
-              <ExternalLink href="https://monitor.mozilla.org/breaches" text="Data Leaks" />
+              <InlineExternalLink href="https://monitor.mozilla.org/breaches" text="Data Leaks" />
             </div>
             <div className="flex flex-row mr-8">
               <span className="mr-2">→</span>{" "}
-              <ExternalLink href="https://privacytests.org/" text="Browser Privacy" />
+              <InlineExternalLink href="https://privacytests.org/" text="Browser Privacy" />
             </div>
             <div className="flex flex-row mr-8">
               <span className="mr-2">→</span>{" "}
-              <ExternalLink
+              <InlineExternalLink
                 href="https://github.com/web3privacy/privacy-builder-pack/blob/main/tools/contribute.md"
                 color="green"
                 text="Contribute"

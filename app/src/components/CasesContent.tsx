@@ -28,6 +28,7 @@ function CasesContentInner({ caseFiles }: { caseFiles: Promise<MarkdownFile[]> }
                     key={file.name}
                     href="https://github.com/web3privacy/privacy-builder-pack/blob/main/cases/contribute.md"
                     text="Contribute"
+                    highlight
                   />
                 )
               } else {

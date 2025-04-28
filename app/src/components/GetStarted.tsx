@@ -1,6 +1,6 @@
 import Image from "next/image"
-import ExternalLink from "./InlineExternalLink"
-import TerminalCursor from "./TerminalCursor"
+import InlineExternalLink from "@/components/InlineExternalLink"
+import TerminalCursor from "@/components/TerminalCursor"
 
 export default function GetStarted() {
   return (
@@ -28,12 +28,13 @@ export default function GetStarted() {
       <div className="flex flex-col thin-border w-full max-w-3xl self-center p-6 px-3 sm:px-6 text-white space-y-8">
         <h3 className="text-green text-xl font-bold">1. The Reason Behind Privacy Builder Pack</h3>
         <p className="text-white">
-          Drawing from our experiences at <ExternalLink href="https://ethbrno.cz/" text="ETHBrno" />
-          , <ExternalLink href="https://ethrome.com/" text="ETHRome" />,{" "}
-          <ExternalLink href="https://ethdam.com/" text="ETHDam" />, and{" "}
-          <ExternalLink href="https://ethberlin.com/" text="ETHBerlin" />, we&#39;ve seen firsthand
-          the need for privacy to be understood not just as a technical feature but as a broader
-          challenge.
+          Drawing from our experiences at{" "}
+          <InlineExternalLink href="https://ethbrno.cz/" text="ETHBrno" />,{" "}
+          <InlineExternalLink href="https://ethrome.com/" text="ETHRome" />,{" "}
+          <InlineExternalLink href="https://ethdam.com/" text="ETHDam" />, and{" "}
+          <InlineExternalLink href="https://ethberlin.com/" text="ETHBerlin" />, we&#39;ve seen
+          firsthand the need for privacy to be understood not just as a technical feature but as a
+          broader challenge.
         </p>
         <p className="text-white">
           The <b>Privacy Builder Pack (PBP)</b> is designed to empower devs to move beyond one-off

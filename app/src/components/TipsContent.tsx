@@ -33,6 +33,7 @@ function TipsContentInner({ tipFiles }: { tipFiles: Promise<MarkdownFile[]> }) {
                     key={file.name}
                     href="https://github.com/web3privacy/privacy-builder-pack/blob/main/tips/contribute.md"
                     text="Contribute"
+                    highlight
                   />
                 )
               } else {

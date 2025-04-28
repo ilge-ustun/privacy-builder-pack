@@ -1,5 +1,5 @@
 import Collapse from "@/components/Collapse"
-import ExternalLink from "@/components/InlineExternalLink"
+import InlineExternalLink from "@/components/InlineExternalLink"
 import Image from "next/image"
 import TailOsUserGuides from "@/components/TailOsUserGuides"
 import TerminalCursor from "@/components/TerminalCursor"
@@ -30,21 +30,21 @@ export default function TailsOS() {
             <div className="flex flex-row flex-wrap">
               <div className="flex flex-row mr-8">
                 <span className="mr-2">→</span>{" "}
-                <ExternalLink
+                <InlineExternalLink
                   href="https://www.anarsec.guide/posts/tails-best/#:~:text=verification%20instructions.-,Step%3A%20Generate%20a%20Key%2DPair,-Tails%20recommends%20this"
                   text="Guide-to-Verify1"
                 />
               </div>
               <div className="flex flex-row mr-8">
                 <span className="mr-2">→</span>{" "}
-                <ExternalLink
+                <InlineExternalLink
                   href="https://www.thinkpenguin.com/gnu-linux/verifying-usb-flash-drive-contains-authentic-copy-tails"
                   text="Guide-to-Verify2"
                 />
               </div>
               <div className="flex flex-row mr-8">
                 <span className="mr-2">→</span>{" "}
-                <ExternalLink
+                <InlineExternalLink
                   href="https://tails.net/doc/reset/windows/index.en.html"
                   text="Reset USB"
                 />
@@ -52,7 +52,7 @@ export default function TailsOS() {
             </div>
             <div className="flex flex-row mr-8">
               <span className="mr-2">→</span>{" "}
-              <ExternalLink
+              <InlineExternalLink
                 href="https://tails.net/install/download/index.en.html"
                 text="Flash Your Own"
               />
@@ -93,28 +93,28 @@ export default function TailsOS() {
           <div className="flex flex-col my-8">
             <ul className="list-disc list-inside">
               <li>
-                <ExternalLink href="https://www.torproject.org/" text="Tor Browser" /> with uBlock,
-                a secure browser and an ad-blocker
+                <InlineExternalLink href="https://www.torproject.org/" text="Tor Browser" />{" "}
+                with uBlock, a secure browser and an ad-blocker
               </li>
               <li>
-                <ExternalLink href="https://www.thunderbird.net/" text="Thunderbird" />, for
+                <InlineExternalLink href="https://www.thunderbird.net/" text="Thunderbird" />, for
                 encrypted emails
               </li>
               <li>
-                <ExternalLink href="https://keepassxc.org/" text="KeePassXC" />, to create and store
-                strong passwords
+                <InlineExternalLink href="https://keepassxc.org/" text="KeePassXC" />, to create and
+                store strong passwords
               </li>
               <li>
-                <ExternalLink href="https://www.libreoffice.org/" text="LibreOffice" />, an office
-                suite
+                <InlineExternalLink href="https://www.libreoffice.org/" text="LibreOffice" />, an
+                office suite
               </li>
               <li>
-                <ExternalLink href="https://onionshare.org/" text="OnionShare" />, to share files,
-                websites, and chat rooms over Tor
+                <InlineExternalLink href="https://onionshare.org/" text="OnionShare" />, to share
+                files, websites, and chat rooms over Tor
               </li>
               <li>
-                <ExternalLink href="https://www.metacleaner.com/" text="Metadata Cleaner" />, to
-                remove metadata from files
+                <InlineExternalLink href="https://www.metacleaner.com/" text="Metadata Cleaner" />,
+                to remove metadata from files
               </li>
               <li>and many more!</li>
             </ul>
@@ -128,7 +128,7 @@ export default function TailsOS() {
               </li>
               <li>
                 Everything in the{" "}
-                <ExternalLink
+                <InlineExternalLink
                   href="https://tails.net/doc/persistent_storage/index.en.html"
                   text="Persistent Storage"
                 />{" "}
