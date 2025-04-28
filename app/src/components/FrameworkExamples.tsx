@@ -3,8 +3,14 @@ import { FrameworkExample } from "@/types/frameworkExamples"
 import splitIntoColumns from "@/utils/splitIntoColumns"
 import ExternalLink from "./ExternalLink"
 
+const contribute = {
+  title: "Contribute",
+  link: "https://github.com/web3privacy/privacy-builder-pack/blob/main/framework/contribute.md",
+  image: "",
+}
+
 export default function FrameworkExamples() {
-  const columns = splitIntoColumns(frameworkExamples, 3)
+  const columns = splitIntoColumns([...frameworkExamples, contribute], 3)
 
   return (
     <div className="w-full mt-32 border-t border-white/20 pt-24 px-0 md:px-24">
@@ -18,6 +24,7 @@ export default function FrameworkExamples() {
                 href={item.link}
                 text={item.title}
                 image={item.image}
+                highlight={item.title === "Contribute"}
               />
             ))}
           </div>
