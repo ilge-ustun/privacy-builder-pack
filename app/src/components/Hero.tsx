@@ -1,5 +1,6 @@
 import { useScreenSize } from "@/hooks/useScreenSize"
 import { useState } from "react"
+import { useDecryptAnimation } from "@/hooks/useDecryptAnimation"
 
 const title = "Privacy Builder Pack_"
 const subtitle = "Your toolkit for digital sovereignty in the surveillance age"
@@ -10,6 +11,10 @@ const glitchedSubtitle = "b«¶%+_¢·b+Zȯz·¢{r{az˫½襕©۹¨"
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false)
   const isSmallScreen = useScreenSize()
+
+  const displayTitle = useDecryptAnimation(title, glitchedTitle, isHovered)
+  const displaySubtitle = useDecryptAnimation(subtitle, glitchedSubtitle, isHovered, 1)
+
   return (
     <div
       className="self-start"
@@ -17,11 +22,9 @@ export default function Hero() {
       onMouseLeave={() => setIsHovered(false)}
     >
       <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold mb-4">
-        {isHovered || isSmallScreen ? title : glitchedTitle}
+        {isSmallScreen ? title : displayTitle}
       </h1>
-      <p className="text-lg xl:text-xl">
-        {isHovered || isSmallScreen ? subtitle : glitchedSubtitle}
-      </p>
+      <p className="text-lg xl:text-xl">{isSmallScreen ? subtitle : displaySubtitle}</p>
     </div>
   )
 }

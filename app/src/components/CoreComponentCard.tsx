@@ -4,6 +4,7 @@ import { CoreComponent } from "@/types/coreComponent"
 import { useState } from "react"
 import { glitchify } from "@/utils/glitchify"
 import { useScreenSize } from "@/hooks/useScreenSize"
+import { useDecryptAnimation } from "@/hooks/useDecryptAnimation"
 
 export default function CoreComponentCard({ component }: { component: CoreComponent }) {
   const [isHovered, setIsHovered] = useState(false)
@@ -11,6 +12,15 @@ export default function CoreComponentCard({ component }: { component: CoreCompon
 
   const glitchedTitle = glitchify(component.title)
   const glitchedDescription = glitchify(component.description)
+
+  const displayTitle = useDecryptAnimation(component.title, glitchedTitle, isHovered)
+  const displayDescription = useDecryptAnimation(
+    component.description,
+    glitchedDescription,
+    isHovered,
+    20,
+  )
+
   return (
     <Link
       key={component.title}
@@ -30,10 +40,10 @@ export default function CoreComponentCard({ component }: { component: CoreCompon
         className="opacity-80 group-hover:opacity-100 transition-opacity w-auto h-auto"
       />
       <h3 className="text-white text-lg font-medium">
-        {isHovered || isSmallScreen ? component.title : glitchedTitle}
+        {isSmallScreen ? component.title : displayTitle}
       </h3>
       <p className="text-white/70 text-sm">
-        {isHovered || isSmallScreen ? component.description : glitchedDescription}
+        {isSmallScreen ? component.description : displayDescription}
       </p>
     </Link>
   )

@@ -3,10 +3,15 @@ import { useState } from "react"
 import CoreComponentCard from "@/components/CoreComponentCard"
 import coreComponents from "@/data/coreComponents.json"
 import { useScreenSize } from "@/hooks/useScreenSize"
+import { useDecryptAnimation } from "@/hooks/useDecryptAnimation"
 
 export default function CoreComponents() {
   const [isHovered, setIsHovered] = useState(false)
   const isSmallScreen = useScreenSize()
+
+  const originalTitle = "Core Components"
+  const glitchedTitle = "©¢w§¶Ï"
+  const displayTitle = useDecryptAnimation(originalTitle, glitchedTitle, isHovered)
 
   return (
     <>
@@ -25,7 +30,7 @@ export default function CoreComponents() {
           className="w-auto h-auto"
         />
         <h1 className="text-white text-2xl font-bold">
-          {isHovered || isSmallScreen ? "Core Components" : "©¢w§¶Ï"}
+          {isSmallScreen ? originalTitle : displayTitle}
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
