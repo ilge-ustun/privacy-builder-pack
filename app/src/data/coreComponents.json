@@ -1,11 +1,11 @@
 [
   {
-    "title": "Glossary",
-    "shortTitle": "Glossary",
-    "description": "Comprehensive guide to privacy and security terminology.",
-    "link": "/glossary",
+    "title": "Tools",
+    "shortTitle": "Tools",
+    "description": "Essential resources for privacy-focused development.",
+    "link": "/tools",
     "external": false,
-    "icon": "/icons/glossary.svg"
+    "icon": "/icons/tools.svg"
   },
   {
     "title": "Ideas Generator",
@@ -32,14 +32,6 @@
     "icon": "/icons/framework.svg"
   },
   {
-    "title": "Tools",
-    "shortTitle": "Tools",
-    "description": "Essential resources for privacy-focused development.",
-    "link": "/tools",
-    "external": false,
-    "icon": "/icons/tools.svg"
-  },
-  {
     "title": "Tips & Tricks",
     "shortTitle": "Tips",
     "description": "Guidelines for implementing privacy by design.",
@@ -48,8 +40,8 @@
     "icon": "/icons/tips.svg"
   },
   {
-    "title": "Personal Stacks",
-    "shortTitle": "Stacks",
+    "title": "Essentials",
+    "shortTitle": "Essentials",
     "description": "Overview of privacy builders personal privacy solutions.",
     "link": "https://stacks.web3privacy.info/categories",
     "external": true,
@@ -70,5 +62,13 @@
     "link": "/tails-os",
     "external": false,
     "icon": "/icons/tailsos.svg"
+  },
+  {
+    "title": "Glossary",
+    "shortTitle": "Glossary",
+    "description": "Comprehensive guide to privacy and security terminology.",
+    "link": "/glossary",
+    "external": false,
+    "icon": "/icons/glossary.svg"
   }
 ]
