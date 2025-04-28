@@ -4,7 +4,7 @@ import Image from "next/image"
 import PagencyFrameworkForm from "@/components/PagencyFrameworkForm"
 import { useSearchParams } from "next/navigation"
 import PagencyFrameworkSummary from "@/components/PagencyFrameworkSummary"
-import FrameworkExamples from "@/components/FrameworkExamples"
+import PagencyFrameworkExamples from "@/components/PagencyFrameworkExamples"
 import TerminalCursor from "@/components/TerminalCursor"
 function FrameworkContent() {
   const searchParams = useSearchParams()
@@ -32,7 +32,7 @@ function FrameworkContent() {
         </div>
       )}
       <div className="relative flex flex-col gap-8 items-center sm:items-start p-5 px-3 sm:px-5 pb-20 sm:p-20 container">
-        <FrameworkExamples />
+        <PagencyFrameworkExamples />
       </div>
     </>
   )

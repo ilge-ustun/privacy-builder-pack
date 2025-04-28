@@ -1,7 +1,8 @@
 import frameworkExamples from "@/data/frameworkExamples.json"
 import { FrameworkExample } from "@/types/frameworkExamples"
-import { splitIntoColumns } from "@/utils/splitIntoColumns"
-import ExternalLink from "./ExternalLink"
+import { addToTheEnd, splitIntoColumns } from "@/utils/splitIntoColumns"
+import ExternalLink from "@/components/ExternalLink"
+import { getRawGitHubUrl } from "@/utils/getRawGitHubUrl"
 
 const contribute = {
   title: "Contribute",
@@ -10,7 +11,7 @@ const contribute = {
 }
 
 export default function FrameworkExamples() {
-  const columns = splitIntoColumns([...frameworkExamples, contribute], 3)
+  const columns = addToTheEnd(splitIntoColumns(frameworkExamples), contribute, 3)
 
   return (
     <div className="w-full mt-32 border-t border-white/20 pt-24 px-0 md:px-24">
@@ -21,7 +22,7 @@ export default function FrameworkExamples() {
             {column.map((item: FrameworkExample) => (
               <ExternalLink
                 key={item.title}
-                href={item.link}
+                href={item.title === "Contribute" ? item.link : getRawGitHubUrl(item.link)}
                 text={item.title}
                 image={item.image}
                 highlight={item.title === "Contribute"}

@@ -34,7 +34,6 @@ export function addToTheEnd<T>(columns: T[][], item: T, targetColumns: number = 
     }
   }
 
-  // Create a new array to avoid mutating the original
   const newColumns = columns.map((col, i) => (i === targetColumnIndex ? [...col, item] : [...col]))
 
   return newColumns

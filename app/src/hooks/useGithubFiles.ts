@@ -1,17 +1,19 @@
 import { MarkdownFile } from "@/types/markdownFile"
 
-interface UseGithubMarkdownFilesOptions {
+interface UseGithubFilesOptions {
   repoOwner: string
   repoName: string
   folderPath: string
+  fileType?: string
 }
 
-export function useGithubMarkdownFiles({
+export function useGithubFiles({
   repoOwner,
   repoName,
   folderPath,
-}: UseGithubMarkdownFilesOptions) {
-  const fetchMarkdownFiles = async (): Promise<MarkdownFile[]> => {
+  fileType = "md",
+}: UseGithubFilesOptions) {
+  const fetchFiles = async (): Promise<MarkdownFile[]> => {
     const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}`
 
     const response = await fetch(apiUrl)
@@ -26,7 +28,7 @@ export function useGithubMarkdownFiles({
 
     const files: GithubFile[] = await response.json()
     const mdFiles = files.filter(
-      (file) => file.name.endsWith(".md") && file.name !== "contribute.md",
+      (file) => file.name.endsWith(`.${fileType}`) && file.name !== "contribute.md",
     )
 
     const fetchedFiles = await Promise.all(
@@ -40,5 +42,5 @@ export function useGithubMarkdownFiles({
     return fetchedFiles
   }
 
-  return { markdownFiles: fetchMarkdownFiles() }
+  return { files: fetchFiles() }
 }

@@ -1,6 +1,6 @@
 import { Suspense, use } from "react"
 import Collapse from "@/components/Collapse"
-import { useGithubMarkdownFiles } from "@/hooks/useGithubMarkdownFiles"
+import { useGithubFiles } from "@/hooks/useGithubFiles"
 import { MarkdownFile } from "@/types/markdownFile"
 import Skeleton from "@/components/Skeleton"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
@@ -52,7 +52,7 @@ function CasesContentInner({ caseFiles }: { caseFiles: Promise<MarkdownFile[]> }
 }
 
 export default function CasesContent() {
-  const { markdownFiles } = useGithubMarkdownFiles({
+  const { files } = useGithubFiles({
     repoOwner: "web3privacy",
     repoName: "privacy-builder-pack",
     folderPath: "cases",
@@ -60,7 +60,7 @@ export default function CasesContent() {
 
   return (
     <Suspense fallback={<Skeleton />}>
-      <CasesContentInner caseFiles={markdownFiles} />
+      <CasesContentInner caseFiles={files} />
     </Suspense>
   )
 }
