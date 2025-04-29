@@ -1,4 +1,4 @@
-import { MarkdownFile } from "@/types/markdownFile"
+import { GitHubFile } from "@/types/gitHubFile"
 
 interface UseGithubFilesOptions {
   repoOwner: string
@@ -13,7 +13,7 @@ export function useGithubFiles({
   folderPath,
   fileType = "md",
 }: UseGithubFilesOptions) {
-  const fetchFiles = async (): Promise<MarkdownFile[]> => {
+  const fetchFiles = async (): Promise<GitHubFile[]> => {
     const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}`
 
     const response = await fetch(apiUrl)
@@ -21,25 +21,24 @@ export function useGithubFiles({
       throw new Error(`Failed to fetch GitHub folder: ${response.status}`)
     }
 
-    interface GithubFile {
-      name: string
-      download_url: string
-    }
-
-    const files: GithubFile[] = await response.json()
-    const mdFiles = files.filter(
+    const files: GitHubFile[] = await response.json()
+    const gitHubFiles = files.filter(
       (file) => file.name.endsWith(`.${fileType}`) && file.name !== "contribute.md",
     )
 
+    if (fileType === "png") {
+      return gitHubFiles as GitHubFile[]
+    }
+
     const fetchedFiles = await Promise.all(
-      mdFiles.map(async (file) => {
+      gitHubFiles.map(async (file) => {
         const res = await fetch(file.download_url)
         const text = await res.text()
-        return { name: file.name, content: text }
+        return { name: file.name, content: text, download_url: file.download_url }
       }),
     )
 
-    return fetchedFiles
+    return fetchedFiles as GitHubFile[]
   }
 
   return { files: fetchFiles() }
